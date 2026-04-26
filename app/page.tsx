@@ -6,11 +6,14 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-   <div className="">
+   <div className=" flex justify-center items-center flex-col">
+    <div className="sm:w-175 gap-10 flex flex-col">
+
       <Navbar />
       <Hero />
       <Blogs />
       <Footer />
+    </div>
    </div>
   );
 }

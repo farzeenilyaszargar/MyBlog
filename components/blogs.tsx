@@ -2,7 +2,7 @@ export default function Blogs()
 {
     return(
         <div>
-            Header
+            blogs
         </div>
     );
 }
