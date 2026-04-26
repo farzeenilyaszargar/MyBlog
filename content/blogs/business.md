@@ -1,6 +1,6 @@
 ---
 title: "What is a Business?"
-date: "2026-04-26"
+date: "2026-02-18"
 summary: "insights I got on what a business is."
 ---
 

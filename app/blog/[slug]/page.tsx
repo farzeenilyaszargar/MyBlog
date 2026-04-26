@@ -35,12 +35,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!post) {
     return {
-      title: "Post not found | Fizzy's Blog",
+      title: "Post not found",
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 
   return {
-    title: `${post.title} | Fizzy's Blog`,
+    title: post.title,
     description: post.summary,
     alternates: {
       canonical: `/blog/${post.slug}`,
@@ -50,6 +54,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: post.title,
       description: post.summary,
       url: `/blog/${post.slug}`,
+      publishedTime: post.date,
       images: [
         {
           url: "/og-image.jpeg",
@@ -91,6 +96,9 @@ export default async function BlogPostPage({ params }: PageProps) {
               h3: ({ children }) => <h3 className="font-title sm:text-2xl text-xl font-semibold leading-tight">{children}</h3>,
               h4: ({ children }) => <h4 className="font-title sm:text-xl text-lg font-semibold leading-tight">{children}</h4>,
               strong: ({ children }) => <strong className="font-bold text-[var(--ink)]">{children}</strong>,
+              ul: ({ children }) => <ul className="my-4 list-disc pl-6">{children}</ul>,
+              ol: ({ children }) => <ol className="my-4 list-decimal pl-6">{children}</ol>,
+              li: ({ children }) => <li className="my-2">{children}</li>,
             }}
           >
             {post.content}
