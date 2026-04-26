@@ -39,6 +39,8 @@ $$
 
 This is intentionally simple. The key idea is that replies and reposts usually matter more than likes.
 
+![Network propagation illustration](https://github.com/twitter/the-algorithm/raw/main/docs/system-diagram.png)
+
 ## Time matters a lot
 
 Engagement is more valuable early.
@@ -73,6 +75,8 @@ Reach\ Potential = Effective\ Score \times A
 $$
 
 If high-signal accounts interact early, your reach increases faster.
+
+![Exponential decay curve](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Exponential_decay.svg/960px-Exponential_decay.svg.png)
 
 ## Full beginner-friendly formula
 

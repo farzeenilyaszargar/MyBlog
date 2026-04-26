@@ -25,3 +25,4 @@ A business is something which fulfils the need of someone and ideally a problem 
 
 I think it is **Distribution** which is the most important part of a business. If your product is the best and no one knows about it, its just a gold in a desert. Useless! 
 
+![Business strategy discussion](/business.jpeg)
