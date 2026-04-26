@@ -78,18 +78,18 @@ export default async function BlogPostPage({ params }: PageProps) {
       <Navbar />
 
       <article className="border-t border-[var(--line)] py-10 max-sm:py-6">
-        <h1 className="font-title text-4xl font-semibold leading-tight max-sm:text-3xl">{post.title}</h1>
+        <h1 className="font-title text-4xl font-semibold leading-tight max-sm:text-2xl">{post.title}</h1>
         <div className="mt-3 text-sm text-[var(--muted)]">{formatDate(post.date)}</div>
 
-        <div className="prose-block mt-8">
+        <div className="prose-block mt-8 sm:text-base text-sm max-sm:prose-sm max-sm:prose-headings:mt-4 max-sm:prose-headings:mb-2">
           <ReactMarkdown
             remarkPlugins={[remarkGfm, remarkMath]}
             rehypePlugins={[rehypeKatex, rehypeHighlight]}
             components={{
-              h1: ({ children }) => <h1 className="font-title text-4xl font-bold leading-tight">{children}</h1>,
-              h2: ({ children }) => <h2 className="font-title text-3xl font-bold leading-tight">{children}</h2>,
-              h3: ({ children }) => <h3 className="font-title text-2xl font-bold leading-tight">{children}</h3>,
-              h4: ({ children }) => <h4 className="font-title text-xl font-bold leading-tight">{children}</h4>,
+              h1: ({ children }) => <h1 className="font-title sm:text-4xl text-3xl font-semibold leading-tight">{children}</h1>,
+              h2: ({ children }) => <h2 className="font-title sm:text-3xl text-2xl font-semibold leading-tight">{children}</h2>,
+              h3: ({ children }) => <h3 className="font-title sm:text-2xl text-xl font-semibold leading-tight">{children}</h3>,
+              h4: ({ children }) => <h4 className="font-title sm:text-xl text-lg font-semibold leading-tight">{children}</h4>,
               strong: ({ children }) => <strong className="font-bold text-[var(--ink)]">{children}</strong>,
             }}
           >

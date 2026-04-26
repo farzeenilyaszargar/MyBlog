@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="mb-4 flex flex-wrap items-center justify-between gap-2 border-t border-[var(--line)] pt-4 text-sm max-sm:flex-col max-sm:items-start max-sm:gap-3">
       <p className="max-sm:text-xs">© {new Date().getFullYear()} Farzeen Ilyas Zargar</p>
-      <div className="flex items-center gap-3 text-[var(--muted)]">
+      <div className=" items-center gap-3 text-[var(--muted)] sm:flex hidden">
         <Link href="https://x.com/farzeenilya" target="_blank" rel="noreferrer" aria-label="X" className="social-icon">
           <Image src="/x.png" alt="X" width={24} height={24} />
         </Link>
