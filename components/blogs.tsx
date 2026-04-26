@@ -16,7 +16,7 @@ export default function Blogs() {
     <section className="space-y-4 py-4">
       {posts.map((post) => (
         <article key={post.slug} className="py-1">
-          <h3 className="font-title mt-2 text-2xl leading-tight">
+          <h3 className="font-title mt-2 text-2xl font-medium leading-tight">
             <Link href={`/blog/${post.slug}`} className="hover:underline">
               {post.title}
             </Link>
