@@ -15,9 +15,9 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Fizzy Blog",
-  description: "Research-style notes by Farzeen Ilyas Zargar.",
-  keywords: ["blog", "fizzy", "farzeen", "notes", "research"],
+  title: "Farzeen's Blog",
+  description: "Blogs by Farzeen Ilyas Zargar. Notes, research, and thoughts on various topics.",
+  keywords: ["blog", "fizzy", "farzeen", "notes", "research", "farzeen ilyas zargar", "fizzy's blog", "farzeen's blog", "thoughts", "articles"],
 };
 
 export default function RootLayout({

@@ -7,6 +7,7 @@ import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import { getPostBySlug, getPostSlugs } from "@/lib/posts";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 type Params = {
   slug: string;
@@ -53,10 +54,10 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   return (
-    <main className="mx-auto flex min-h-screen w-full max-w-3xl flex-col">
+    <main className="mx-auto mb-4 flex min-h-screen w-full max-w-3xl flex-col">
       <Navbar />
 
-      <article className="mt-2 border-t border-[var(--line)] pt-4">
+      <article className="mt-2 border-t border-[var(--line)] py-7">
         <h1 className="font-title text-4xl leading-tight">{post.title}</h1>
         <div className="mt-3 text-sm text-[var(--muted)]">{formatDate(post.date)}</div>
 
@@ -69,6 +70,8 @@ export default async function BlogPostPage({ params }: PageProps) {
           </ReactMarkdown>
         </div>
       </article>
+
+      <Footer />
     </main>
   );
 }
