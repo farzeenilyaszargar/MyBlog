@@ -15,16 +15,22 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Fizzy's Blog",
-  description: "Read my thoughts on programming, technology, and more.",
-  keywords: ["blog", "fizzy", "fizzy's blog", "farzeen"],
-
+  title: "Fizzy Blog",
+  description: "Research-style notes by Farzeen Ilyas Zargar.",
+  keywords: ["blog", "fizzy", "farzeen", "notes", "research"],
 };
 
-export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en" className={`${sourceSerif.variable} ${playfairDisplay.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-[#FBE8CE]">{children}</body>
+    <html
+      lang="en"
+      className={`${sourceSerif.variable} ${playfairDisplay.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }
