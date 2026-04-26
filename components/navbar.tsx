@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ThemeToggle from "@/components/theme-toggle";
 
 export default function Navbar() {
   return (
@@ -7,7 +8,7 @@ export default function Navbar() {
         <Link href="/" className="font-title text-2xl font-semibold tracking-tight">
           fizzy
         </Link>
-        <p>Light</p>
+        <ThemeToggle />
       </div>
     </header>
   );

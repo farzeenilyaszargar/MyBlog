@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
@@ -7,6 +6,7 @@ import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import { getPostBySlug, getPostSlugs } from "@/lib/posts";
+import Navbar from "@/components/navbar";
 
 type Params = {
   slug: string;
@@ -53,15 +53,11 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   return (
-    <main className="mx-auto min-h-screen w-full max-w-4xl px-6 py-8 sm:px-10">
-      <div className="border-b border-[var(--line)] pb-4">
-        <Link href="/" className="font-title text-2xl font-semibold tracking-tight">
-          fizzy
-        </Link>
-      </div>
+    <main className="mx-auto flex min-h-screen w-full max-w-3xl flex-col">
+      <Navbar />
 
-      <article className="mt-8 rounded-xl">
-        <h1 className="font-title mt-2 text-4xl leading-tight">{post.title}</h1>
+      <article className="mt-2 border-t border-[var(--line)] pt-4">
+        <h1 className="font-title text-4xl leading-tight">{post.title}</h1>
         <div className="mt-3 text-sm text-[var(--muted)]">{formatDate(post.date)}</div>
 
         <div className="prose-block mt-8">

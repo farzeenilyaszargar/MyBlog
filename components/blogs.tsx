@@ -13,9 +13,9 @@ export default function Blogs() {
   const posts = getAllPosts();
 
   return (
-    <section className="space-y-5 py-10">
+    <section className="space-y-4 py-4">
       {posts.map((post) => (
-        <article key={post.slug} className="">
+        <article key={post.slug} className="py-1">
           <h3 className="font-title mt-2 text-2xl leading-tight">
             <Link href={`/blog/${post.slug}`} className="hover:underline">
               {post.title}

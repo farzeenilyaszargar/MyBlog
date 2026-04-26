@@ -9,6 +9,14 @@
   --line: #ddd4c8;
 }
 
+:root[data-theme="dark"] {
+  --paper-bg: #12110f;
+  --card-bg: #1a1917;
+  --ink: #efebe4;
+  --muted: #b8afa3;
+  --line: #3b352f;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -18,6 +26,7 @@ body {
   background: var(--paper-bg);
   color: var(--ink);
   font-family: var(--font-source-serif), serif;
+  transition: background-color 180ms ease, color 180ms ease;
 }
 
 .font-title {
@@ -81,4 +90,17 @@ a {
   border-bottom: 1px solid var(--line);
   text-align: left;
   padding: 0.55rem 0.65rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+.social-icon:hover {
+  color: #000000;
+  transform: rotate(-10deg);
 }
