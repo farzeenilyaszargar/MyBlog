@@ -57,14 +57,21 @@ export default async function BlogPostPage({ params }: PageProps) {
     <main className="mx-auto mb-4 flex min-h-screen w-full max-w-3xl flex-col">
       <Navbar />
 
-      <article className="mt-2 border-t border-[var(--line)] py-7">
-        <h1 className="font-title text-4xl leading-tight">{post.title}</h1>
+      <article className="mt-2 border-t border-[var(--line)] py-10">
+        <h1 className="font-title text-4xl font-semibold leading-tight">{post.title}</h1>
         <div className="mt-3 text-sm text-[var(--muted)]">{formatDate(post.date)}</div>
 
         <div className="prose-block mt-8">
           <ReactMarkdown
             remarkPlugins={[remarkGfm, remarkMath]}
             rehypePlugins={[rehypeKatex, rehypeHighlight]}
+            components={{
+              h1: ({ children }) => <h1 className="font-title text-4xl font-bold leading-tight">{children}</h1>,
+              h2: ({ children }) => <h2 className="font-title text-3xl font-bold leading-tight">{children}</h2>,
+              h3: ({ children }) => <h3 className="font-title text-2xl font-bold leading-tight">{children}</h3>,
+              h4: ({ children }) => <h4 className="font-title text-xl font-bold leading-tight">{children}</h4>,
+              strong: ({ children }) => <strong className="font-bold text-[var(--ink)]">{children}</strong>,
+            }}
           >
             {post.content}
           </ReactMarkdown>

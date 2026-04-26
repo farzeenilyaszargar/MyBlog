@@ -3,7 +3,14 @@ import Image from "next/image"
 export default function Hero() {
     return (
         <section className="border-b border-t border-[var(--line)] py-7 flex gap-5 justify-between items-center">
-            <Image src="/profile.png" alt="Profile Picture" width={150} height={150} className="profile-image rounded-full scale-x-[-1]" style={{ height: "auto" }} />
+            <Image
+                src="/profile.png"
+                alt="Profile Picture"
+                width={150}
+                height={150}
+                className="profile-image rounded-full scale-x-[-1]"
+                style={{ width: "150px", height: "auto" }}
+            />
 
 
             <div className="flex flex-col ">
