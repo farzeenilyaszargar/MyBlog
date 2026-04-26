@@ -1,14 +1,14 @@
 ---
-title: "Welcome to Fizzy Blog"
+title: "Welcome to Fizzy Bloggy"
 date: "2026-04-26"
-summary: "A quick note about how this blog is structured and how posts are written."
+summary: "A quick note aboutasdasda how this blog is structured and how posts are written."
 tags:
   - meta
   - notes
 ---
 
 ## Why this blog
-
+asdasdasd
 This blog is designed as a clean personal knowledge space where each post is written in Markdown and rendered with a research-note style layout.
 
 ## Writing style

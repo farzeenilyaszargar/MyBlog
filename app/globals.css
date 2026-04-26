@@ -7,6 +7,9 @@
   --ink: #1f1f1f;
   --muted: #67635e;
   --line: #ddd4c8;
+  --code-inline-bg: #efe8dc;
+  --code-block-bg: #f4eee3;
+  --code-text: #1f1f1f;
 }
 
 :root[data-theme="dark"] {
@@ -15,6 +18,9 @@
   --ink: #efebe4;
   --muted: #b8afa3;
   --line: #3b352f;
+  --code-inline-bg: #2a2622;
+  --code-block-bg: #1f1c19;
+  --code-text: #efebe4;
 }
 
 * {
@@ -62,7 +68,8 @@ a {
 
 .prose-block code {
   font-size: 0.9em;
-  background: #efe8dc;
+  color: var(--code-text);
+  background: var(--code-inline-bg);
   border-radius: 0.3rem;
   padding: 0.1rem 0.35rem;
 }
@@ -71,13 +78,20 @@ a {
   overflow-x: auto;
   border: 1px solid var(--line);
   border-radius: 0.75rem;
-  background: #f4eee3;
+  background: var(--code-block-bg);
+  color: var(--code-text);
   padding: 1rem;
 }
 
 .prose-block pre code {
+  color: inherit;
   background: transparent;
   padding: 0;
+}
+
+.prose-block .hljs {
+  background: var(--code-block-bg);
+  color: var(--code-text);
 }
 
 .prose-block table {
@@ -103,4 +117,13 @@ a {
 .social-icon:hover {
   color: #000000;
   transform: rotate(-10deg);
+}
+
+:root[data-theme="dark"] .profile-image {
+  filter: invert(1) brightness(0.82);
+  opacity: 0.7;
+}
+
+:root[data-theme="dark"] .social-icon img {
+  filter: invert(1);
 }
