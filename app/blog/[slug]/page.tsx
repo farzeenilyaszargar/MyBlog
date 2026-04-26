@@ -42,6 +42,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${post.title} | Fizzy's Blog`,
     description: post.summary,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.summary,
+      url: `/blog/${post.slug}`,
+      images: [
+        {
+          url: "/profile.png",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.summary,
+      images: ["/profile.png"],
+    },
   };
 }
 
@@ -54,11 +74,11 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   return (
-    <main className="mx-auto mb-4 flex min-h-screen w-full max-w-3xl flex-col">
+    <main className="mx-auto mb-4 flex min-h-screen w-full max-w-3xl flex-col max-sm:px-4">
       <Navbar />
 
-      <article className=" border-t border-[var(--line)] py-10">
-        <h1 className="font-title text-4xl font-semibold leading-tight">{post.title}</h1>
+      <article className="border-t border-[var(--line)] py-10 max-sm:py-6">
+        <h1 className="font-title text-4xl font-semibold leading-tight max-sm:text-3xl">{post.title}</h1>
         <div className="mt-3 text-sm text-[var(--muted)]">{formatDate(post.date)}</div>
 
         <div className="prose-block mt-8">

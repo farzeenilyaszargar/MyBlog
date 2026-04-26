@@ -13,10 +13,10 @@ export default function Blogs() {
   const posts = getAllPosts();
 
   return (
-    <section className="space-y-5 py-10">
+    <section className="space-y-5 py-10 max-sm:space-y-4 max-sm:py-6">
       {posts.map((post) => (
-        <article key={post.slug} className="py-1">
-          <h3 className="font-title mt-2 text-2xl font-medium leading-tight">
+        <article key={post.slug} className="py-1 max-sm:py-0">
+          <h3 className="font-title mt-2 text-2xl font-medium leading-tight max-sm:text-xl">
             <Link href={`/blog/${post.slug}`} className="hover:underline">
               {post.title}
             </Link>
@@ -29,7 +29,7 @@ export default function Blogs() {
             <span aria-hidden>•</span>
             <span>{post.readingMinutes} min read</span>
           </div>
-          <p className="mt-2 leading-7">{post.summary}</p>
+          <p className="mt-2 leading-7 max-sm:text-[15px] max-sm:leading-6">{post.summary}</p>
         </article>
       ))}
     </section>
