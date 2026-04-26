@@ -3,7 +3,7 @@ import { Source_Serif_4, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const siteUrl = "https://fizzy.blog";
-const ogImagePath = "/profile.png";
+const ogImagePath = "/og-image.jpeg";
 
 const sourceSerif = Source_Serif_4({
   subsets: ["latin"],

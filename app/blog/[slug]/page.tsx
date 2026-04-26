@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: `/blog/${post.slug}`,
       images: [
         {
-          url: "/profile.png",
+          url: "/og-image.jpeg",
         },
       ],
     },
@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: "summary_large_image",
       title: post.title,
       description: post.summary,
-      images: ["/profile.png"],
+      images: ["/og-image.jpeg"],
     },
   };
 }
