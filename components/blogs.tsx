@@ -13,7 +13,7 @@ export default function Blogs() {
   const posts = getAllPosts();
 
   return (
-    <section className="space-y-4 py-4">
+    <section className="space-y-5 py-10">
       {posts.map((post) => (
         <article key={post.slug} className="py-1">
           <h3 className="font-title mt-2 text-2xl font-medium leading-tight">
