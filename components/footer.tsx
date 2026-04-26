@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className=" flex flex-wrap items-center justify-between gap-2 border-t pt-4 text-sm ">
+    <footer className=" flex flex-wrap items-center justify-between gap-2 border-t pt-4 text-sm border-[var(--line)] ">
       <p>© {new Date().getFullYear()} Farzeen Ilyas Zargar</p>
       <div className="flex items-center gap-3 text-[var(--muted)]">
         <Link href="https://x.com/farzeenilya" target="_blank" rel="noreferrer" aria-label="X" className="social-icon">
