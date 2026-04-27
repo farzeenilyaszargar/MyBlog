@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/posts";
+import { getProjectSlugs } from "@/lib/projects";
 
 const baseUrl = "https://fizzy.blog";
 
@@ -11,6 +12,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "weekly" as const,
     priority: 0.7,
   }));
+  const projectEntries = getProjectSlugs().map((slug) => ({
+    url: `${baseUrl}/projects/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
 
   return [
     {
@@ -20,5 +27,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     ...postEntries,
+    ...projectEntries,
   ];
 }

@@ -27,8 +27,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="mx-auto flex min-h-screen w-full max-w-3xl flex-col max-sm:px-4">
-      <div className="flex flex-col ">
-        <Navbar />  
+      <div className="flex flex-col">
+        <Navbar />
         <Hero />
         <Blogs />
         <Footer />
