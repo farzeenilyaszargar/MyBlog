@@ -1,6 +1,8 @@
 import Navbar from "@/components/navbar"
 import Image from "next/image";
 import Link from "next/link";
+import { projects } from "@/lib/projects";
+import Footer from "@/components/footer";
 
 export default function About() {
     return (
@@ -12,9 +14,10 @@ export default function About() {
                     <p className="text-lg text-[var(--muted)]">
                         Hi, I&apos;m Farzeen Ilyas Zargar, a passionate software developer and lifelong learner. I have a strong interest in web development, machine learning, and open-source software. I enjoy building projects that solve real-world problems and contribute to the tech community.
                     </p>
-                    <p className="text-lg text-[var(--muted)]">
-                        In my free time, I like to explore new technologies, read about advancements in AI, and work on personal projects. I&apos;m always eager to connect with like-minded individuals and collaborate on exciting ventures.
-                    </p>
+                    <Link href="/resume.pdf" target="_blank" rel="noreferrer" className="w-[200px] rounded-lg border px-3 py-2 text-sm flex justify-center items-center gap-1 text-[--muted] border-[--muted] hover:bg-[var(--code-inline-bg)] transition-colors">
+                        <p>View My Resume</p>
+                        <Image src="/link.png" alt="External Link Icon" width={10} height={10} className="scale-x-[-1] w-3 h-3 " />
+                    </Link>
                 </div>
                 <div className="mx-auto sm:ml-10 sm:w-1/3">
                     <Image
@@ -22,7 +25,7 @@ export default function About() {
                         alt="Profile Picture"
                         width={400}
                         height={600}
-                        className="h-auto w-full max-w-[280px] rounded-xl  object-cover"
+                        className="h-auto w-full max-w-[280px] rounded-xl  object-cover profile-image"
                     />
                 </div>
             </div>
@@ -30,14 +33,14 @@ export default function About() {
             <div className="space-y-5 border-t border-[var(--line)] py-10">
                 <h2 className="font-title text-3xl font-semibold tracking-tight">GitHub Activity</h2>
                 <p className="text-[var(--muted)]">
-                    Recent coding activity from my open-source work.
+                    Recent coding activity of my GitHub profile.
                 </p>
                 <div className="space-y-4">
                     <Link
                         href="https://github.com/farzeenilyaszargar"
                         target="_blank"
                         rel="noreferrer"
-                        className="block overflow-hidden rounded-xl border border-[var(--line)] bg-[var(--card-bg)] transition-transform duration-200 hover:-translate-y-1"
+                        className="block overflow-hidden"
                     >
                         <Image
                             src="https://ghchart.rshah.org/22c55e/farzeenilyaszargar"
@@ -49,7 +52,7 @@ export default function About() {
                         />
                     </Link>
                 </div>
-                
+
             </div>
 
             <div className="space-y-5 border-t border-[var(--line)] py-10">
@@ -91,6 +94,59 @@ export default function About() {
                     </Link>
                 </div>
             </div>
+            <div className="space-y-5 border-t border-[var(--line)] py-10">
+                <h2 className="font-title text-3xl font-semibold tracking-tight">Notable Projects & Companies</h2>
+                <p className="text-[var(--muted)]">
+                    Though I have worked on several projects and companies, here are some of the most notable ones.
+                </p>
+                <div className="grid gap-5 sm:grid-cols-2">
+                    {projects.map((project) => (
+                        <Link
+                            key={project.slug}
+                            href={`/projects/${project.slug}`}
+                            className="group relative block overflow-hidden rounded-2xl"
+                            aria-label={project.title}
+                        >
+                            <div className="relative">
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    width={640}
+                                    height={420}
+                                    className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                                />
+                                <div className="absolute inset-0 bg-black/35 transition-opacity duration-300" />
+                                <div className="absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                                <div className="absolute bottom-0 left-0 right-0 p-4">
+                                    <p className="font-title text-3xl font-semibold text-white transition-all duration-300">
+                                        {project.title}
+                                    </p>
+                                    <p className="mt-1 hidden translate-y-2 text-sm font-medium text-gray-200 transition-all duration-300 group-hover:block group-hover:translate-y-0">
+                                        {project.subtitle}
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="space-y-3 border border-t-0 border-[var(--line)] bg-[var(--card-bg)] p-4">
+                                <p className="text-sm text-[var(--muted)]">
+                                    {project.summary}
+                                </p>
+                                <div className="flex flex-wrap gap-2">
+                                    {project.stack.slice(0, 3).map((item) => (
+                                        <span
+                                            key={`${project.slug}-${item}`}
+                                            className="rounded-full border border-[var(--line)] px-2.5 py-1 text-xs text-[var(--muted)]"
+                                        >
+                                            {item}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+
+            </div>
+            <Footer />
         </div>
     );
 }
