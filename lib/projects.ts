@@ -14,7 +14,7 @@ export const projects: Project[] = [
     slug: "superflights",
     title: "SuperFlights",
     subtitle: "Flight booking product and growth experiments",
-    image: "/business.jpeg",
+    image: "/superlights.png",
     summary:
       "A travel product project focused on flight discovery, pricing visibility, and conversion-oriented UX decisions.",
     stack: ["Product", "Growth", "Distribution", "Experiments"],
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     slug: "nap-inc",
     title: "Nap Inc",
     subtitle: "AI workflows and product systems",
-    image: "/og-image.jpeg",
+    image: "/nap.png",
     summary:
       "A product-focused initiative around practical AI execution, creator tooling, and operational automation patterns.",
     stack: ["AI", "Automation", "Systems", "Operations"],
@@ -52,7 +52,7 @@ export const projects: Project[] = [
     slug: "surfers",
     title: "Surfers",
     subtitle: "Online Website Building Platform With AI",
-    image: "/profile.png",
+    image: "/surfers.png",
     summary:
       "A personal publication system for technical notes, quantitative thinking, and audience-focused knowledge distribution.",
     stack: ["Writing", "SEO", "Content Systems", "Brand"],

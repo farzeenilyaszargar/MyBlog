@@ -14,9 +14,14 @@ export default function About() {
                     <p className="text-lg text-[var(--muted)]">
                         Hi, I&apos;m Farzeen Ilyas Zargar, a passionate software developer and lifelong learner. I have a strong interest in web development, machine learning, and open-source software. I enjoy building projects that solve real-world problems and contribute to the tech community.
                     </p>
-                    <Link href="/resume.pdf" target="_blank" rel="noreferrer" className="w-[200px] rounded-lg border px-3 py-2 text-sm flex justify-center items-center gap-1 text-[--muted] border-[--muted] hover:bg-[var(--code-inline-bg)] transition-colors">
-                        <p>View My Resume</p>
-                        <Image src="/link.png" alt="External Link Icon" width={10} height={10} className="scale-x-[-1] w-3 h-3 " />
+                    <Link
+                        href="/resume.pdf"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex w-fit items-center gap-2 rounded-md border bg-black  border-[var(--line)] px-4 py-2 text-sm  transition-colors hover:bg-transparent group"
+                    >
+                        <span className="text-white group-hover:text-black font-medium ">View Resume</span>
+                        <Image src="/link.png" alt="External Link Icon" width={11} height={11} className="h-3 w-3 scale-x-[-1] invert group-hover:invert-0" />
                     </Link>
                 </div>
                 <div className="mx-auto sm:ml-10 sm:w-1/3">
@@ -49,6 +54,7 @@ export default function About() {
                             height={180}
                             className="h-auto w-full"
                             unoptimized
+                            loading="eager"
                         />
                     </Link>
                 </div>
@@ -126,21 +132,7 @@ export default function About() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="space-y-3 border border-t-0 border-[var(--line)] bg-[var(--card-bg)] p-4">
-                                <p className="text-sm text-[var(--muted)]">
-                                    {project.summary}
-                                </p>
-                                <div className="flex flex-wrap gap-2">
-                                    {project.stack.slice(0, 3).map((item) => (
-                                        <span
-                                            key={`${project.slug}-${item}`}
-                                            className="rounded-full border border-[var(--line)] px-2.5 py-1 text-xs text-[var(--muted)]"
-                                        >
-                                            {item}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
+                            
                         </Link>
                     ))}
                 </div>
