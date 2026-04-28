@@ -65,14 +65,9 @@ export default async function ProjectPage({ params }: PageProps) {
     <main className="mx-auto mb-4 flex min-h-screen w-full max-w-3xl flex-col px-4 sm:px-0">
       <Navbar />
       <section className="space-y-8 border-t border-[var(--line)] py-10">
-        <Link
-          href="/about"
-          className="inline-flex rounded-full border border-[var(--line)] px-3 py-1.5 text-sm text-[var(--muted)] transition-colors hover:bg-[var(--code-inline-bg)]"
-        >
-          Back to about
-        </Link>
+        
 
-        <div className="space-y-3">
+        <div className="space-y-3 text-center">
           <h1 className="font-title text-4xl font-semibold leading-tight">{project.title}</h1>
           <p className="text-lg text-[var(--muted)]">{project.subtitle}</p>
         </div>
@@ -85,7 +80,7 @@ export default async function ProjectPage({ params }: PageProps) {
           className="mx-auto h-auto w-full max-w-2xl rounded-2xl border border-[var(--line)] object-cover"
         />
 
-        <div className="space-y-5 rounded-2xl border border-[var(--line)] bg-[var(--card-bg)] p-6">
+        <div className="space-y-5 rounded-2xl  p-6">
           <p className="leading-8 text-[var(--muted)]">{project.summary}</p>
           <p className="leading-8 text-[var(--muted)]">{project.overview}</p>
           <ul className="space-y-2 text-sm leading-7 text-[var(--muted)]">
@@ -93,16 +88,7 @@ export default async function ProjectPage({ params }: PageProps) {
               <li key={detail}>{detail}</li>
             ))}
           </ul>
-          <div className="flex flex-wrap gap-2 pt-1">
-            {project.stack.map((item) => (
-              <span
-                key={`${project.slug}-${item}`}
-                className="rounded-full border border-[var(--line)] px-3 py-1 text-sm text-[var(--muted)]"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
+          
         </div>
       </section>
       <Footer />
