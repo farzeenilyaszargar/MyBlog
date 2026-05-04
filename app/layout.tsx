@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Source_Serif_4, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const siteUrl = "https://fizzy.blog";
+const siteUrl = "https://www.fizzy.blog";
 const ogImagePath = "/og-image.jpeg";
 
 const sourceSerif = Source_Serif_4({

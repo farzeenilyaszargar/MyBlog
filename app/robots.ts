@@ -6,6 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://fizzy.blog/sitemap.xml",
+    host: "https://www.fizzy.blog",
+    sitemap: "https://www.fizzy.blog/sitemap.xml",
   };
 }

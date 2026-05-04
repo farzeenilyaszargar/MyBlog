@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/posts";
 import { getProjectSlugs } from "@/lib/projects";
 
-const baseUrl = "https://fizzy.blog";
+const baseUrl = "https://www.fizzy.blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
