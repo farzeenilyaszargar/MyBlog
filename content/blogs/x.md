@@ -1,5 +1,5 @@
 ---
-title: "A Quantitative Model for Virality on X (Twitter)"
+title: "An Analysis of the Working of X/Twitter Algorithm"
 date: "2026-04-25"
 summary: "A simple, practical model for going viral on X using easy formulas, timing, and distribution strategy."
 tags:
