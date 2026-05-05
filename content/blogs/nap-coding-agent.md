@@ -1,9 +1,9 @@
 ---
-title: "nap coding agent: the next gen security ai coding tool"
+title: "Nap Code: The Next Gen Security AI Coding Tool"
 date: "2026-05-05"
-summary: "An analysis of Nap Coding Agent, a next-gen security AI coding tool for secure AI-generated code, local multi-agent workflows, and pre-ship vulnerability detection."
+summary: "An analysis of Nap Code, a next-gen security AI coding tool focused on secure code generation, local multi-agent workflows, and catching vulnerabilities before release."
 tags:
-  - nap coding agent
+  - nap code
   - security ai coding tool
   - secure ai generated code
   - vulnerability detection
@@ -15,7 +15,7 @@ tags:
   - local workflows
   - nap
 keywords:
-  - nap coding agent
+  - nap code
   - next gen security ai coding tool
   - secure ai generated code
   - local multi-agent workflows
@@ -23,62 +23,105 @@ keywords:
   - secure code generation
 ---
 
-Most AI coding tools optimize for speed first. That is useful, but speed without trust creates risk.
+Most AI coding tools optimize for speed first. That helps output, but not necessarily software safety.
 
-Nap is built around a different principle: fast code generation should not come at the cost of security. The goal is simple. Help developers move quickly while making secure-by-default choices.
+Nap Code takes a different route: move fast, but keep security load-bearing from the beginning.
 
-## Why Nap matters
+Website: [nap-code.com](https://nap-code.com)
 
-Modern teams are shipping faster than ever with AI-assisted development. But vulnerabilities can slip into generated code when security checks are delayed until the end of a sprint.
+## Why this architecture matters
 
-Nap addresses this gap by combining:
+The architecture report for Napster (internal engineering v1.0, April 2026) frames a strong thesis: the runtime is the real product in an AI coding agent. Models change quickly. The runtime decisions around tools, context, approvals, rollouts, and safety boundaries determine long-term quality.
 
-- secure AI code generation,
-- local multi-agent execution,
-- and pre-ship vulnerability detection.
+This directly connects to the core promise of Nap Code:
 
-This lets teams catch issues early instead of reacting after production incidents.
+- generate secure AI-assisted code,
+- run multi-agent workflows locally,
+- and catch vulnerabilities before they ship.
 
-## Secure AI-generated code
+## Key architecture ideas from the report
 
-Nap is designed to reduce common security mistakes during code generation itself. Instead of treating security as a separate afterthought, security patterns are part of the generation workflow.
+### 1. Turn-DAG scheduling (not only single-turn loops)
 
-That means cleaner defaults for areas like:
+Instead of forcing one active turn per session, Napster introduces a dependency-aware Turn-DAG model. Independent tasks can run in parallel while dependent work respects explicit ordering via `depends_on`.
 
-- input handling and validation,
-- safer auth/session patterns,
-- dependency and package hygiene,
-- and reduced insecure boilerplate.
+Why this matters for security:
 
-The result is not just “working code,” but code that is more production-ready from the first draft.
+- parallel reviewer/tester/security agents become practical,
+- faster feedback loops reduce risky late merges,
+- and teams can verify more before release cutoffs.
 
-## Multi-agent workflows, fully local
+### 2. Capability Algebra for safer concurrency
 
-One of Nap’s strongest ideas is local multi-agent execution.
+The report defines a typed capability/effect model for tools. Instead of manual “this tool is safe to run in parallel” guesses, tool effects are declared and parallelism is derived from effect compatibility.
 
-Different agents can focus on different responsibilities in parallel, for example:
+Why this matters for security:
 
-- implementation agent for feature delivery,
-- review agent for logic and correctness,
-- security agent for risk checks,
-- and test agent for edge-case validation.
+- fewer accidental race conditions in automated workflows,
+- clearer policy control over reads/writes/network/process effects,
+- better guarantees when multiple agents execute together.
 
-Running these workflows locally gives developers tighter control, faster loops, and better privacy over project context.
+### 3. Neutral Transcript + Unified Model Interface
 
-## Catch vulnerabilities before they ship
+Napster’s architecture is designed for provider portability, with a neutral transcript that can round-trip across different model providers through one interface layer.
 
-The cost of a vulnerability is lowest when discovered early. Nap aims to shift security left by surfacing potential risks before merge and deployment.
+Why this matters:
 
-Instead of waiting for late-stage security reviews, developers get actionable feedback while code is still being written and refined.
+- teams avoid hard lock-in to one model vendor,
+- security workflows remain stable even if provider choices change,
+- migration cost is lower over time.
 
-This improves:
+### 4. Hybrid retrieval index for better code understanding
 
-- engineering confidence,
-- release quality,
-- and long-term maintainability.
+The report proposes a three-tier index strategy combining AST-level structure, symbol/LSP graph information, and embedding recall.
+
+Why this matters:
+
+- better code context for generated changes,
+- fewer blind edits,
+- stronger static understanding before agent-written patches are applied.
+
+### 5. Merkle-chained rollouts and verifiable compaction
+
+Napster specifies hash-chained rollout logs for tamper evidence and auditable history, instead of plain append-only logs without integrity signals.
+
+Why this matters:
+
+- stronger trust in what the agent actually executed,
+- better forensic debugging,
+- safer governance for production-facing AI-assisted workflows.
+
+### 6. Unified sandbox DSL across platforms
+
+The report outlines one policy language compiled to OS-specific sandbox mechanisms instead of divergent ad-hoc implementations.
+
+Why this matters:
+
+- consistent security posture across Linux/macOS/Windows,
+- portable policy behavior,
+- fewer environment-specific surprises.
+
+### 7. NAPSTER.md + structured skills/agents
+
+A single personalization/control surface (`NAPSTER.md`) and typed skill/agent contracts reduces config fragmentation.
+
+Why this matters:
+
+- easier policy review,
+- less hidden behavior,
+- cleaner team-level reproducibility.
+
+## What this means for Nap Code users
+
+For developers, this architecture direction makes Nap Code feel less like “autocomplete with tools” and more like a controlled engineering runtime:
+
+- local-first multi-agent execution,
+- explicit capability boundaries,
+- security-aware workflow defaults,
+- and traceability across the full coding loop.
 
 ## Final thought
 
-The next generation of AI coding tools will not be defined only by how much code they can generate. They will be defined by how safely they help teams ship.
+The next generation of AI coding tools will be judged not only by speed, but by reliability, auditability, and security-by-default behavior.
 
-Nap fits this direction well: secure AI-generated code, local multi-agent workflows, and early vulnerability detection in one practical development loop.
+Nap Code’s architecture direction is compelling because it treats these as core runtime properties, not optional add-ons after generation.
