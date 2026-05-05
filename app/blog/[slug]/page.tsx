@@ -100,7 +100,9 @@ export default async function BlogPostPage({ params }: PageProps) {
               ul: ({ children }) => <ul className="my-4 list-disc pl-6">{children}</ul>,
               ol: ({ children }) => <ol className="my-4 list-decimal pl-6">{children}</ol>,
               li: ({ children }) => <li className="my-2">{children}</li>,
-              img: ({ src, alt }) => <img src={src ?? ""} alt={alt ?? ""} />,
+              img: ({ src, alt }) => (
+                <img src={src ?? ""} alt={alt ?? ""} loading="lazy" decoding="async" />
+              ),
             }}
           >
             {post.content}

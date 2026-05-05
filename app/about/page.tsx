@@ -30,6 +30,8 @@ export default function About() {
                         alt="Profile Picture"
                         width={400}
                         height={600}
+                        priority
+                        sizes="(max-width: 640px) 280px, 33vw"
                         className="h-auto w-full max-w-[280px] rounded-xl  object-cover profile-image"
                     />
                 </div>
@@ -52,9 +54,8 @@ export default function About() {
                             alt="Farzeen's GitHub contribution lights in green"
                             width={1000}
                             height={180}
+                            sizes="(max-width: 768px) 100vw, 768px"
                             className="h-auto w-full"
-                            unoptimized
-                            loading="eager"
                         />
                     </Link>
                 </div>
@@ -119,6 +120,7 @@ export default function About() {
                                     alt={project.title}
                                     width={640}
                                     height={420}
+                                    sizes="(max-width: 640px) 100vw, 50vw"
                                     className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                                 />
                                 <div className="absolute inset-0 bg-black/35 transition-opacity duration-300" />

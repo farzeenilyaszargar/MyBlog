@@ -80,7 +80,7 @@ export default function ThemeToggle() {
         width={theme === "light" ? 18 : 22}
         height={theme === "light" ? 18 : 22}
         className={isSunIcon ? "invert" : ""}
-        priority
+        sizes="22px"
       />
     </button>
   );

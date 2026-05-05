@@ -76,6 +76,7 @@ export default async function ProjectPage({ params }: PageProps) {
           alt={project.title}
           width={960}
           height={560}
+          sizes="(max-width: 768px) 100vw, 768px"
           className="mx-auto h-auto w-full max-w-2xl rounded-2xl border border-[var(--line)] object-cover"
         />
 

@@ -8,6 +8,8 @@ export default function Hero() {
                 alt="Profile Picture"
                 width={150}
                 height={150}
+                priority
+                sizes="(max-width: 640px) 112px, 150px"
                 className="profile-image rounded-full scale-x-[-1] max-sm:w-[112px]"
                 style={{ width: "150px", height: "auto" }}
             />
