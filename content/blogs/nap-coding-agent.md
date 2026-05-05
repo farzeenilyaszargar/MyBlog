@@ -16,6 +16,11 @@ tags:
   - nap
 keywords:
   - nap code
+  - napster cli
+  - napster coding agent
+  - nap code ai
+  - napster architecture
+  - nap-code.com
   - next gen security ai coding tool
   - secure ai generated code
   - local multi-agent workflows

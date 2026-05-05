@@ -47,6 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: post.title,
     description: post.summary,
+    keywords: post.keywords.length > 0 ? post.keywords : post.tags,
     alternates: {
       canonical: `/blog/${post.slug}`,
     },

@@ -8,6 +8,7 @@ export type PostMeta = {
   date: string;
   summary: string;
   tags: string[];
+  keywords: string[];
   readingMinutes: number;
 };
 
@@ -40,6 +41,9 @@ function parsePost(fileName: string): Post {
     tags: Array.isArray(data.tags)
       ? data.tags.filter((tag): tag is string => typeof tag === "string")
       : [],
+    keywords: Array.isArray(data.keywords)
+      ? data.keywords.filter((keyword): keyword is string => typeof keyword === "string")
+      : [],
     readingMinutes,
     content,
   };
@@ -55,6 +59,7 @@ export function getAllPosts(): PostMeta[] {
       date: post.date,
       summary: post.summary,
       tags: post.tags,
+      keywords: post.keywords,
       readingMinutes: post.readingMinutes,
     }));
 }
