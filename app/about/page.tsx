@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/lib/projects";
 import Footer from "@/components/footer";
+import GitHubActivity from "@/components/github-activity";
 
 export default function About() {
     return (
@@ -42,23 +43,7 @@ export default function About() {
                 <p className="text-[var(--muted)]">
                     Recent coding activity of my GitHub profile.
                 </p>
-                <div className="space-y-4">
-                    <Link
-                        href="https://github.com/farzeenilyaszargar"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="block overflow-hidden"
-                    >
-                        <Image
-                            src="https://ghchart.rshah.org/22c55e/farzeenilyaszargar"
-                            alt="Farzeen's GitHub contribution lights in green"
-                            width={1000}
-                            height={180}
-                            sizes="(max-width: 768px) 100vw, 768px"
-                            className="h-auto w-full"
-                        />
-                    </Link>
-                </div>
+                <GitHubActivity />
 
             </div>
 
