@@ -48,45 +48,6 @@ export default function About() {
             </div>
 
             <div className="space-y-5 border-t border-[var(--line)] py-10">
-                <h2 className="font-title text-3xl font-semibold tracking-tight">Connect With Me</h2>
-                <div className="flex flex-wrap items-center gap-4">
-                    <Link
-                        href="mailto:farzeenilyaszargar@gmail.com"
-                        aria-label="Email"
-                        className="social-icon rounded-full  p-3 transition-colors hover:bg-[var(--code-inline-bg)]"
-                    >
-                        <Image src="/email.png" alt="Email" width={28} height={28} />
-                    </Link>
-                    <Link
-                        href="https://github.com/farzeenilyaszargar"
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label="GitHub"
-                        className="social-icon rounded-full  p-3 transition-colors hover:bg-[var(--code-inline-bg)]"
-                    >
-                        <Image src="/github.png" alt="GitHub" width={28} height={28} />
-                    </Link>
-                    <Link
-                        href="https://linkedin.com/in/farzeenilyaszargar"
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label="LinkedIn"
-                        className="social-icon rounded-full  p-3 transition-colors hover:bg-[var(--code-inline-bg)]"
-                    >
-                        <Image src="/linkedin.png" alt="LinkedIn" width={28} height={28} />
-                    </Link>
-                    <Link
-                        href="https://x.com/farzeenilya"
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label="X"
-                        className="social-icon rounded-full  p-3 transition-colors hover:bg-[var(--code-inline-bg)]"
-                    >
-                        <Image src="/x.png" alt="X" width={28} height={28} />
-                    </Link>
-                </div>
-            </div>
-            <div className="space-y-5 border-t border-[var(--line)] py-10">
                 <h2 className="font-title text-3xl font-semibold tracking-tight">Notable Projects & Companies</h2>
                 <p className="text-[var(--muted)]">
                     Though I have worked on several projects and companies, here are some of the most notable ones.
@@ -124,6 +85,45 @@ export default function About() {
                     ))}
                 </div>
 
+            </div>
+            <div className="space-y-5 border-t border-[var(--line)] py-10">
+                <h2 className="font-title text-3xl font-semibold tracking-tight">Connect With Me</h2>
+                <div className="flex flex-wrap items-center gap-4">
+                    <Link
+                        href="mailto:farzeenilyaszargar@gmail.com"
+                        aria-label="Email"
+                        className="social-icon rounded-full  p-3 transition-colors hover:bg-[var(--code-inline-bg)]"
+                    >
+                        <Image src="/email.png" alt="Email" width={28} height={28} />
+                    </Link>
+                    <Link
+                        href="https://github.com/farzeenilyaszargar"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="GitHub"
+                        className="social-icon rounded-full  p-3 transition-colors hover:bg-[var(--code-inline-bg)]"
+                    >
+                        <Image src="/github.png" alt="GitHub" width={28} height={28} />
+                    </Link>
+                    <Link
+                        href="https://linkedin.com/in/farzeenilyaszargar"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="LinkedIn"
+                        className="social-icon rounded-full  p-3 transition-colors hover:bg-[var(--code-inline-bg)]"
+                    >
+                        <Image src="/linkedin.png" alt="LinkedIn" width={28} height={28} />
+                    </Link>
+                    <Link
+                        href="https://x.com/farzeenilya"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="X"
+                        className="social-icon rounded-full  p-3 transition-colors hover:bg-[var(--code-inline-bg)]"
+                    >
+                        <Image src="/x.png" alt="X" width={28} height={28} />
+                    </Link>
+                </div>
             </div>
             <Footer />
         </div>

@@ -101,6 +101,18 @@ export default async function BlogPostPage({ params }: PageProps) {
               ul: ({ children }) => <ul className="my-4 list-disc pl-6">{children}</ul>,
               ol: ({ children }) => <ol className="my-4 list-decimal pl-6">{children}</ol>,
               li: ({ children }) => <li className="my-2">{children}</li>,
+              a: ({ href, children }) => {
+                const isExternal = typeof href === "string" && /^https?:\/\//i.test(href);
+                return (
+                  <a
+                    href={href}
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noopener noreferrer" : undefined}
+                  >
+                    {children}
+                  </a>
+                );
+              },
               img: ({ src, alt }) => (
                 <img src={src ?? ""} alt={alt ?? ""} loading="lazy" decoding="async" />
               ),

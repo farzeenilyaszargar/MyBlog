@@ -88,6 +88,26 @@ a {
   font-weight: 700;
 }
 
+.prose-block a {
+  color: #0f5bd8;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1.5px;
+}
+
+.prose-block a:hover {
+  color: #0a49af;
+}
+
+:root[data-theme="dark"] .prose-block a {
+  color: #7fb0ff;
+}
+
+:root[data-theme="dark"] .prose-block a:hover {
+  color: #a8c9ff;
+}
+
 .prose-block p,
 .prose-block ul,
 .prose-block ol,
