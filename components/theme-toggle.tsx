@@ -15,7 +15,7 @@ function getClientTheme(): Theme {
     return stored;
   }
 
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return "light";
 }
 
 function subscribe(onStoreChange: () => void) {
@@ -23,7 +23,6 @@ function subscribe(onStoreChange: () => void) {
     return () => {};
   }
 
-  const media = window.matchMedia("(prefers-color-scheme: dark)");
   const handleStorage = (event: StorageEvent) => {
     if (event.key === null || event.key === "fizzy-theme") {
       onStoreChange();
@@ -33,12 +32,10 @@ function subscribe(onStoreChange: () => void) {
   const handleThemeChange = () => onStoreChange();
 
   window.addEventListener("storage", handleStorage);
-  media.addEventListener("change", handleThemeChange);
   window.addEventListener("fizzy-theme-change", handleThemeChange);
 
   return () => {
     window.removeEventListener("storage", handleStorage);
-    media.removeEventListener("change", handleThemeChange);
     window.removeEventListener("fizzy-theme-change", handleThemeChange);
   };
 }
