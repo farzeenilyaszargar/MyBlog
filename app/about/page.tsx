@@ -19,7 +19,7 @@ export default function About() {
                         href="/resume.pdf"
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex w-fit items-center gap-2 rounded-md border border-[var(--line)] bg-[var(--ink)] px-4 py-2 text-sm font-medium text-[var(--paper-bg)] transition-colors hover:bg-transparent hover:text-[var(--ink)]"
+                        className="resume-link"
                     >
                         <span>View Resume</span>
                         <svg
