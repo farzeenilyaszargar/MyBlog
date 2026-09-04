@@ -1,28 +1,45 @@
 ---
-title: "What is a Business?"
+title: "The Startup Lesson I Learned the Hard Way"
 date: "2026-02-18"
-summary: "insights I got on what a business is."
+summary: "A small reflection from my SuperFlights journey, and the moment I understood why distribution matters so much."
 ---
 
-I used to think that business is an enterprise where you build a product and go to the market to sell it. However it seems that i was very wrong.
+I used to think a business was mostly about building a good product and taking it to market.
 
-I went to Mumbai in June, 2025 to build a startup called SuperFlights. I was young and excited. I thought we were building the next big thing. Then one day a guy asked me a question regarding what I was building.
+That sounds reasonable when you are starting out. Build something useful, tell people about it, and eventually customers will come. But when I started working on SuperFlights, I realized the real world is not that neat.
 
-I stopped. I started thinking. Then I said a Flight Booking Engine. The man was confused. He said, "Yeah, but there are dozen of companies who do that. Why would anyone buy tickets from you specifically." 
+I went to Mumbai in June 2025 to build SuperFlights. I was young, excited, and honestly a little convinced that we were building something big. In my head, the path felt clear: build a better flight booking product, make the experience cleaner, and people would care.
 
-At that point I did not have an answer. Me and my co founder went for a smoke and started thinking. What was it that made us unique? Another question arose.
-"Do we need to be unique?"
+Then one day someone asked me a very simple question.
 
-I don't think so. Uniqueness is not the factor that matters in business. Sure its a great thing to have especially if you have monopolization of that sector, but no one is stopping others to get into it and kill your "uniqueness". Lyft started before Uber and yet everyone knows Uber and its a billion dollar empire. 
+"What are you building?"
 
-Timing also does not matter. It matters not if you were early or not. Its meaningless to be early or late.Then what differentiates businesses? 
+I said, "A flight booking engine."
 
-I thought as I lit up another cigarette. What is the *factor* that makes businesses work. I thought and thought and thought.
+He looked at me and said something like, "Sure, but there are already many companies doing that. Why would someone book from you specifically?"
 
-I think I found an answer I said. It is very simple and we tend to overcomplicate it. 
+That question stayed with me.
 
-A business is something which fulfils the need of someone and ideally a problem is large enough that you can make a business out of it. However everyone knows this and there are business which fail even after this. It really matters not how good the thing you are selling is. Ideally it does matters but more importantly what matters is that you can bring your solution to the people who are in need. 
+Not because it was complicated. It stayed with me because it was painfully simple. I did not have a strong answer.
 
-I think it is **Distribution** which is the most important part of a business. If your product is the best and no one knows about it, its just a gold in a desert. Useless! 
+Later, my co-founder and I stepped outside and kept thinking about it. What actually makes a company work? Is it being unique? Is it being early? Is it having the best product?
 
-![Business strategy discussion](/business.jpeg)
+The more I thought about it, the less convinced I became.
+
+Being unique helps, but uniqueness rarely stays protected forever. Being early sounds romantic, but timing alone does not build trust. Even having a great product is not enough if nobody knows why it matters or where to find it.
+
+That was the lesson I slowly started understanding:
+
+**Distribution is not a side part of a business. It is one of the main parts.**
+
+A business exists to solve a real problem for real people. But the solution has to reach those people. If the right users never discover it, understand it, trust it, or feel pulled toward it, the product stays invisible.
+
+That changed how I looked at SuperFlights.
+
+I stopped thinking only about the product and started thinking about the path between the product and the person who needs it. How do they hear about it? Why do they believe it? What makes them choose it when alternatives already exist? What makes them come back?
+
+I still believe product quality matters deeply. But I no longer think it is enough on its own.
+
+A beautiful product without distribution is like having a light switched on in an empty room. It may be bright, but nobody is there to see it.
+
+That is probably the simplest startup lesson I have learned so far: build something people need, but care just as much about how it reaches them.

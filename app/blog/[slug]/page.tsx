@@ -88,7 +88,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         <h1 className="font-title text-4xl font-semibold leading-tight max-sm:text-2xl">{post.title}</h1>
         <div className="mt-3 text-sm text-[var(--muted)]">{formatDate(post.date)}</div>
 
-        <div className="prose-block mt-8 sm:text-base text-sm max-sm:prose-sm max-sm:prose-headings:mt-4 max-sm:prose-headings:mb-2">
+        <div className="prose-block prose-article mt-8 max-sm:prose-headings:mt-4 max-sm:prose-headings:mb-2">
           <ReactMarkdown
             remarkPlugins={[remarkGfm, remarkMath]}
             rehypePlugins={[rehypeKatex, rehypeHighlight]}

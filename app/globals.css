@@ -50,6 +50,10 @@ a {
   font-size: 1.16rem;
 }
 
+.prose-block.prose-article {
+  font-size: 1rem;
+}
+
 .prose-block h1,
 .prose-block h2,
 .prose-block h3,
