@@ -19,10 +19,22 @@ export default function About() {
                         href="/resume.pdf"
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex w-fit items-center gap-2 rounded-md border bg-black  border-[var(--line)] px-4 py-2 text-sm  transition-colors hover:bg-transparent group"
+                        className="inline-flex w-fit items-center gap-2 rounded-md border border-[var(--line)] bg-[var(--ink)] px-4 py-2 text-sm font-medium text-[var(--paper-bg)] transition-colors hover:bg-transparent hover:text-[var(--ink)]"
                     >
-                        <span className="text-white group-hover:text-black font-medium ">View Resume</span>
-                        <Image src="/link.png" alt="External Link Icon" width={11} height={11} className="h-3 w-3 scale-x-[-1] invert group-hover:invert-0" />
+                        <span>View Resume</span>
+                        <svg
+                            aria-hidden="true"
+                            viewBox="0 0 16 16"
+                            className="h-3 w-3"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="1.8"
+                        >
+                            <path d="M5 11L11 5" />
+                            <path d="M6 5h5v5" />
+                        </svg>
                     </Link>
                 </div>
                 <div className="mx-auto sm:ml-10 sm:w-1/3">
