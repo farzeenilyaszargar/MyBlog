@@ -9,6 +9,7 @@ import remarkMath from "remark-math";
 import { getPostBySlug, getPostSlugs } from "@/lib/posts";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import ArticleVideoWork from "@/components/article-video-work";
 
 type Params = {
   slug: string;
@@ -80,6 +81,8 @@ export default async function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
+  const contentBlocks = post.content.split("[[VIDEO_WORK]]");
+
   return (
     <main className="mx-auto mb-4 flex min-h-screen w-full max-w-3xl flex-col max-sm:px-4">
       <Navbar />
@@ -118,8 +121,44 @@ export default async function BlogPostPage({ params }: PageProps) {
               ),
             }}
           >
-            {post.content}
+            {contentBlocks[0]}
           </ReactMarkdown>
+          {contentBlocks.length > 1 ? (
+            <>
+              <ArticleVideoWork />
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm, remarkMath]}
+                rehypePlugins={[rehypeKatex, rehypeHighlight]}
+                components={{
+                  h1: ({ children }) => <h1 className="font-title sm:text-4xl text-3xl font-semibold leading-tight">{children}</h1>,
+                  h2: ({ children }) => <h2 className="font-title sm:text-3xl text-2xl font-semibold leading-tight">{children}</h2>,
+                  h3: ({ children }) => <h3 className="font-title sm:text-2xl text-xl font-semibold leading-tight">{children}</h3>,
+                  h4: ({ children }) => <h4 className="font-title sm:text-xl text-lg font-semibold leading-tight">{children}</h4>,
+                  strong: ({ children }) => <strong className="font-bold text-[var(--ink)]">{children}</strong>,
+                  ul: ({ children }) => <ul className="my-4 list-disc pl-6">{children}</ul>,
+                  ol: ({ children }) => <ol className="my-4 list-decimal pl-6">{children}</ol>,
+                  li: ({ children }) => <li className="my-2">{children}</li>,
+                  a: ({ href, children }) => {
+                    const isExternal = typeof href === "string" && /^https?:\/\//i.test(href);
+                    return (
+                      <a
+                        href={href}
+                        target={isExternal ? "_blank" : undefined}
+                        rel={isExternal ? "noopener noreferrer" : undefined}
+                      >
+                        {children}
+                      </a>
+                    );
+                  },
+                  img: ({ src, alt }) => (
+                    <img src={src ?? ""} alt={alt ?? ""} loading="lazy" decoding="async" />
+                  ),
+                }}
+              >
+                {contentBlocks.slice(1).join("[[VIDEO_WORK]]")}
+              </ReactMarkdown>
+            </>
+          ) : null}
         </div>
       </article>
 
