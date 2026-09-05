@@ -1,7 +1,7 @@
 ---
 title: "Journey At Mumbai"
 date: "2026-02-18"
-summary: "Insights I got while building a startup in Mumbai."
+summary: "A reflection on building SuperFlights in Mumbai, learning 2D animation for ads, chasing distribution, pivoting into AI tools, and understanding what really makes startups move."
 ---
 
 I used to think that business is an enterprise where you build a product and go to the market to sell it. However it seems that I was very wrong.
