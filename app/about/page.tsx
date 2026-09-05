@@ -1,9 +1,42 @@
 import Navbar from "@/components/navbar"
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { projects } from "@/lib/projects";
 import Footer from "@/components/footer";
 import GitHubActivity from "@/components/github-activity";
+
+export const metadata: Metadata = {
+    title: "About Farzeen Ilyas Zargar",
+    description: "About Farzeen Ilyas Zargar, a software developer building startups, AI tools, web products, and open-source experiments.",
+    keywords: [
+        "Farzeen Ilyas Zargar",
+        "Fizzy",
+        "software developer",
+        "startup builder",
+        "AI tools",
+        "SuperFlights",
+        "Surfers",
+        "Nap Inc",
+        "open source",
+        "web development",
+    ],
+    alternates: {
+        canonical: "/about",
+    },
+    openGraph: {
+        title: "About Farzeen Ilyas Zargar",
+        description: "About Farzeen Ilyas Zargar, a software developer building startups, AI tools, web products, and open-source experiments.",
+        url: "/about",
+        images: [{ url: "/og-image.jpeg" }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "About Farzeen Ilyas Zargar",
+        description: "About Farzeen Ilyas Zargar, a software developer building startups, AI tools, web products, and open-source experiments.",
+        images: ["/og-image.jpeg"],
+    },
+};
 
 export default function About() {
     return (

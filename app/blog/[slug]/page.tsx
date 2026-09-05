@@ -82,12 +82,39 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   const contentBlocks = post.content.split("[[VIDEO_WORK]]");
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.summary,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Person",
+      name: "Farzeen Ilyas Zargar",
+      url: "https://www.fizzy.blog",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Farzeen Ilyas Zargar",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://www.fizzy.blog/blog/${post.slug}`,
+    },
+    image: "https://www.fizzy.blog/og-image.jpeg",
+    keywords: post.keywords.length > 0 ? post.keywords.join(", ") : post.tags.join(", "),
+  };
 
   return (
     <main className="mx-auto mb-4 flex min-h-screen w-full max-w-3xl flex-col max-sm:px-4">
       <Navbar />
 
       <article className="border-t border-[var(--line)] py-10 max-sm:py-6">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        />
         <h1 className="font-title text-4xl font-semibold leading-tight max-sm:text-2xl">{post.title}</h1>
         <div className="mt-3 text-sm text-[var(--muted)]">{formatDate(post.date)}</div>
 

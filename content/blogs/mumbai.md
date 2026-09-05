@@ -2,6 +2,28 @@
 title: "Journey At Mumbai"
 date: "2026-02-18"
 summary: "A reflection on building SuperFlights in Mumbai, learning 2D animation for ads, chasing distribution, pivoting into AI tools, and understanding what really makes startups move."
+tags:
+  - startup
+  - mumbai
+  - superflights
+  - distribution
+  - indie startup
+  - marketing
+  - ai tools
+  - founder journey
+keywords:
+  - Journey At Mumbai
+  - Farzeen Ilyas Zargar startup journey
+  - SuperFlights startup
+  - startup journey in Mumbai
+  - indie startup marketing
+  - startup distribution strategy
+  - building a startup in college
+  - learning 2D animation for ads
+  - SuperFlights Mumbai
+  - surfers.bot
+  - startup pivot to AI tools
+  - founder lessons from Mumbai
 ---
 
 I used to think that business is an enterprise where you build a product and go to the market to sell it. However it seems that I was very wrong.

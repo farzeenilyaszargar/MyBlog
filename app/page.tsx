@@ -6,20 +6,31 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Farzeen's Blog",
-  description: "Blogs by Farzeen Ilyas Zargar. Notes, research, and thoughts on various topics.",
+  description: "Personal essays and notes by Farzeen Ilyas Zargar on startups, software, AI tools, distribution, and building things on the internet.",
+  keywords: [
+    "Farzeen Ilyas Zargar",
+    "Fizzy blog",
+    "startup essays",
+    "software developer blog",
+    "AI tools",
+    "indie startup",
+    "SuperFlights",
+    "startup distribution",
+    "Mumbai startup journey",
+  ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Farzeen's Blog",
-    description: "Blogs by Farzeen Ilyas Zargar. Notes, research, and thoughts on various topics.",
+    description: "Personal essays and notes by Farzeen Ilyas Zargar on startups, software, AI tools, distribution, and building things on the internet.",
     url: "/",
     images: [{ url: "/og-image.jpeg" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Farzeen's Blog",
-    description: "Blogs by Farzeen Ilyas Zargar. Notes, research, and thoughts on various topics.",
+    description: "Personal essays and notes by Farzeen Ilyas Zargar on startups, software, AI tools, distribution, and building things on the internet.",
     images: ["/og-image.jpeg"],
   },
 };
