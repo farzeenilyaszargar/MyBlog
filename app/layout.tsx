@@ -3,7 +3,7 @@ import { Source_Serif_4, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const siteUrl = "https://www.fizzy.blog";
-const ogImagePath = "/og-image.jpeg";
+const ogImagePath = "/social-screenshot.png";
 
 const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
@@ -67,6 +67,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: ogImagePath,
+        width: 1200,
+        height: 630,
+        alt: "Journey At Mumbai by Farzeen Ilyas Zargar",
       },
     ],
   },

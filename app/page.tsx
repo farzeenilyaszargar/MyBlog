@@ -25,13 +25,20 @@ export const metadata: Metadata = {
     title: "Farzeen's Blog",
     description: "Personal essays and notes by Farzeen Ilyas Zargar on startups, software, AI tools, distribution, and building things on the internet.",
     url: "/",
-    images: [{ url: "/og-image.jpeg" }],
+    images: [
+      {
+        url: "/social-screenshot.png",
+        width: 1200,
+        height: 630,
+        alt: "Journey At Mumbai by Farzeen Ilyas Zargar",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Farzeen's Blog",
     description: "Personal essays and notes by Farzeen Ilyas Zargar on startups, software, AI tools, distribution, and building things on the internet.",
-    images: ["/og-image.jpeg"],
+    images: ["/social-screenshot.png"],
   },
 };
 

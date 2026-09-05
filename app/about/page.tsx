@@ -28,13 +28,20 @@ export const metadata: Metadata = {
         title: "About Farzeen Ilyas Zargar",
         description: "About Farzeen Ilyas Zargar, a software developer building startups, AI tools, web products, and open-source experiments.",
         url: "/about",
-        images: [{ url: "/og-image.jpeg" }],
+        images: [
+            {
+                url: "/social-screenshot.png",
+                width: 1200,
+                height: 630,
+                alt: "Journey At Mumbai by Farzeen Ilyas Zargar",
+            },
+        ],
     },
     twitter: {
         card: "summary_large_image",
         title: "About Farzeen Ilyas Zargar",
         description: "About Farzeen Ilyas Zargar, a software developer building startups, AI tools, web products, and open-source experiments.",
-        images: ["/og-image.jpeg"],
+        images: ["/social-screenshot.png"],
     },
 };
 
