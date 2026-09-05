@@ -4,7 +4,6 @@ import Link from "next/link";
 import { projects } from "@/lib/projects";
 import Footer from "@/components/footer";
 import GitHubActivity from "@/components/github-activity";
-import VideoBento from "@/components/video-bento";
 
 export default function About() {
     return (
@@ -99,7 +98,6 @@ export default function About() {
                 </div>
 
             </div>
-            <VideoBento />
             <Footer />
         </div>
     );

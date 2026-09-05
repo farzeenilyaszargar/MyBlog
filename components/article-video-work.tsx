@@ -1,42 +1,55 @@
+import Image from "next/image";
+
 const videoAssets = [
   {
     src: "/video-assets/ad1.mp4",
     title: "SuperFlights reel",
-    className: "sm:row-span-2",
+    aspectRatio: "1080 / 1920",
   },
   {
     src: "/video-assets/cancel-flights-superflights.mp4",
     title: "Cancel flights anytime",
-    className: "",
+    aspectRatio: "1 / 1",
   },
   {
     src: "/video-assets/post1.mp4",
     title: "General post",
-    className: "",
+    aspectRatio: "1080 / 1350",
   },
   {
     src: "/video-assets/anim-3.mp4",
     title: "Motion study",
-    className: "",
+    aspectRatio: "1080 / 1920",
   },
   {
     src: "/video-assets/anim-5-2.mp4",
     title: "Product animation",
-    className: "",
+    aspectRatio: "1080 / 1920",
+  },
+  {
+    src: "/video-assets/anim-6.mp4",
+    title: "Launch motion",
+    aspectRatio: "1080 / 1920",
+  },
+  {
+    src: "/video-assets/anim-ad-surfers.mp4",
+    title: "Surfers motion ad",
+    aspectRatio: "3840 / 2160",
   },
 ];
 
 export default function ArticleVideoWork() {
   return (
-    <div className="not-prose my-8 grid auto-rows-[180px] grid-cols-1 gap-3 sm:grid-cols-3 sm:auto-rows-[150px]">
+    <div className="not-prose my-8 columns-2 gap-2 sm:columns-3">
       {videoAssets.map((asset) => (
         <div
           key={asset.src}
-          className={`group relative overflow-hidden rounded-lg bg-[var(--card-bg)] ${asset.className}`}
+          className="mb-2 break-inside-avoid overflow-hidden rounded-lg bg-[var(--card-bg)]"
+          style={{ aspectRatio: asset.aspectRatio }}
         >
           <video
             src={asset.src}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            className="block h-full w-full object-contain"
             autoPlay
             muted
             loop
@@ -44,12 +57,18 @@ export default function ArticleVideoWork() {
             preload="metadata"
             aria-label={asset.title}
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
-          <p className="pointer-events-none absolute bottom-3 left-3 right-3 text-xs font-medium text-white">
-            {asset.title}
-          </p>
         </div>
       ))}
+      <div className="mb-2 break-inside-avoid overflow-hidden rounded-lg bg-white" style={{ aspectRatio: "540 / 360" }}>
+        <Image
+          src="/video-assets/nap-motion.gif"
+          alt="Nap motion cutout"
+          width={540}
+          height={360}
+          unoptimized
+          className="block h-full w-full object-contain"
+        />
+      </div>
     </div>
   );
 }
