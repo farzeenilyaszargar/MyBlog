@@ -7,11 +7,6 @@ const videoAssets = [
     aspectRatio: "1080 / 1920",
   },
   {
-    src: "/video-assets/cancel-flights-superflights.mp4",
-    title: "Cancel flights anytime",
-    aspectRatio: "1 / 1",
-  },
-  {
     src: "/video-assets/post1.mp4",
     title: "General post",
     aspectRatio: "1080 / 1350",
