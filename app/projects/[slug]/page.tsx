@@ -63,10 +63,10 @@ export default async function ProjectPage({ params }: PageProps) {
   return (
     <main className="mx-auto mb-4 flex min-h-screen w-full max-w-3xl flex-col px-4 sm:px-0">
       <Navbar />
-      <section className="space-y-8 border-t border-[var(--line)] py-10">
+      <section className="space-y-8 border-t border-[var(--line)] py-10 text-left">
         
 
-        <div className="space-y-3 text-center">
+        <div className="space-y-3 text-left">
           <h1 className="font-title text-4xl font-semibold leading-tight">{project.title}</h1>
           <p className="text-lg text-[var(--muted)]">{project.subtitle}</p>
         </div>
@@ -77,7 +77,7 @@ export default async function ProjectPage({ params }: PageProps) {
           width={960}
           height={560}
           sizes="(max-width: 768px) 100vw, 768px"
-          className="mx-auto h-auto w-full max-w-2xl rounded-2xl border border-[var(--line)] object-cover"
+          className="mx-0 h-auto w-full max-w-2xl rounded-2xl border border-[var(--line)] object-cover"
         />
 
         <div className="space-y-5 rounded-2xl  p-6">
