@@ -67,14 +67,14 @@ export default function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="inline-flex items-center justify-center p-0"
+      className="inline-flex h-[22px] w-[22px] items-center justify-center p-0"
       aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
       title={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
     >
       <Image
         src={theme === "light" ? "/dark.png" : "/light.png"}
         alt={theme === "light" ? "Dark mode" : "Light mode"}
-        width={theme === "light" ? 18 : 22}
+        width={22}
         height={theme === "light" ? 18 : 22}
         className={isSunIcon ? "invert" : ""}
         sizes="22px"
