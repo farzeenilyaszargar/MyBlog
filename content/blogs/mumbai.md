@@ -28,9 +28,9 @@ keywords:
 
 I used to think that business is an enterprise where you build a product and go to the market to sell it. However it seems that I was very wrong.
 
-I went to Mumbai in June, 2025 to build a startup called SuperFlights. I was young and excited. I thought we were building the next big thing. Then one day a guy asked me a question regarding what I was building.
+I went to Mumbai in June, 2025 to build a startup called SuperFlights. I was young and excited. I thought we were building the next big thing. We had raised our first ever funding of around **₹25,00,000** (~$26,000) in pre seed funding.
 
-I stopped. I started thinking. Then I said a Flight Booking Engine. The man was confused. He said, "Yeah, but there are dozen of companies who do that. Why would anyone buy tickets from you specifically?"
+Then one day a guy asked me a question regarding what I was building. I stopped. I started thinking. Then I said a Flight Booking Engine. The man was confused. He said, "Yeah, but there are dozen of companies who do that. Why would anyone buy tickets from you specifically?"
 
 At that point I did not have an answer. Me and my co founder went for a smoke and started thinking. What was it that made us unique? Another question arose. "Do we need to be unique?"
 
@@ -47,6 +47,8 @@ A business is something which fulfils the need of someone and ideally a problem 
 I think it is **Distribution** which is the most important part of a business. If your product is the best and no one knows about it, its just a gold in a desert. Useless!
 
 I thought of multiple ways to distribute our software. We could do ads, billboards and so much more. I felt for a while that it would be interesting to make ads myself and we started envisioning our ads and other stuff. In the span of two months I learn 2D animation. Below you can see some of the work I did.
+
+### 2d animations by me
 
 [[VIDEO_WORK]]
 
