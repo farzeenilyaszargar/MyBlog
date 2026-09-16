@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 const videoAssets = [
   {
@@ -33,26 +36,60 @@ const videoAssets = [
   },
 ];
 
+function LazyVideo({ src, title, aspectRatio }: (typeof videoAssets)[number]) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isNearViewport, setIsNearViewport] = useState(false);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    if (!("IntersectionObserver" in window)) {
+      const fallback = globalThis.setTimeout(() => setIsNearViewport(true), 0);
+      return () => globalThis.clearTimeout(fallback);
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsNearViewport(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px 0px", threshold: 0.01 },
+    );
+
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={containerRef}
+      className="mb-2 break-inside-avoid overflow-hidden rounded-lg bg-[var(--card-bg)]"
+      style={{ aspectRatio }}
+    >
+      {isNearViewport ? (
+        <video
+          src={src}
+          className="block h-full w-full object-contain"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-label={title}
+        />
+      ) : null}
+    </div>
+  );
+}
+
 export default function ArticleVideoWork() {
   return (
     <div className="not-prose my-8 columns-2 gap-2 sm:columns-3">
       {videoAssets.map((asset) => (
-        <div
-          key={asset.src}
-          className="mb-2 break-inside-avoid overflow-hidden rounded-lg bg-[var(--card-bg)]"
-          style={{ aspectRatio: asset.aspectRatio }}
-        >
-          <video
-            src={asset.src}
-            className="block h-full w-full object-contain"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            aria-label={asset.title}
-          />
-        </div>
+        <LazyVideo key={asset.src} {...asset} />
       ))}
       <div className="mb-2 break-inside-avoid overflow-hidden rounded-lg bg-white" style={{ aspectRatio: "540 / 360" }}>
         <Image
