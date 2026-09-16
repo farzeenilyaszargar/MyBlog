@@ -4,8 +4,8 @@ export default function Hero() {
     return (
         <section className="flex items-center justify-between gap-5 border-b border-t border-[var(--line)] py-7 max-sm:flex-col max-sm:items-center max-sm:gap-4 max-sm:py-5">
             <Image
-                src="/profile.png"
-                alt="Profile Picture"
+                src="/home-profile.png"
+                alt="Farzeen Ilyas Zargar"
                 width={150}
                 height={150}
                 priority
