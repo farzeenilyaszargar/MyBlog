@@ -53,7 +53,7 @@ export default function About() {
                 <div className="flex flex-col gap-8 sm:w-2/3">
                     <h1 className="font-title text-4xl font-bold tracking-tight">About Me</h1>
                     <p className="text-lg text-[var(--muted)]">
-                        Hi, I&apos;m Farzeen Ilyas Zargar, a passionate software developer and lifelong learner. I have a strong interest in web development, machine learning, and open-source software. I enjoy building projects that solve real-world problems and contribute to the tech community.
+                        hi 👋 i am a developer from delhi building cool stuff. i love ml, math, computers and philosophy. currently contemplating the machinations of reality
                     </p>
                     <Link
                         href="/resume.pdf"
