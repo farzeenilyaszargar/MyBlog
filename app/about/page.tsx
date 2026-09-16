@@ -59,21 +59,21 @@ export default function About() {
                         href="/resume.pdf"
                         target="_blank"
                         rel="noreferrer"
-                        className="resume-link"
+                        className="resume-link group"
                     >
                         <span>View Resume</span>
                         <svg
                             aria-hidden="true"
                             viewBox="0 0 16 16"
-                            className="h-3 w-3"
+                            className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-1"
                             fill="none"
                             stroke="currentColor"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth="1.8"
                         >
-                            <path d="M5 11L11 5" />
-                            <path d="M6 5h5v5" />
+                            <path d="M3 8h10" />
+                            <path d="m9 4 4 4-4 4" />
                         </svg>
                     </Link>
                 </div>
