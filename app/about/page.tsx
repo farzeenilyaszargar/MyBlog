@@ -79,8 +79,8 @@ export default function About() {
                 </div>
                 <div className="mx-auto sm:ml-10 sm:w-1/3">
                     <Image
-                        src="/meee.png"
-                        alt="Profile Picture"
+                        src="/about-profile.png"
+                        alt="Farzeen Ilyas Zargar"
                         width={400}
                         height={600}
                         priority
