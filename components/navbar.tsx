@@ -18,7 +18,7 @@ export default function Navbar() {
         <div className="font-ui flex items-center justify-between gap-5">
           <Link
             href="/about"
-            className={`text-md font-medium text-gray-600 hover:text-gray-900 ${isAboutPage ? "underline decoration-2 underline-offset-4 decoration-wavy underline-gray-600" : ""}`}
+            className={`text-md font-medium text-[var(--muted)] hover:text-[var(--ink)] ${isAboutPage ? "underline decoration-2 underline-offset-4 decoration-wavy decoration-[var(--muted)]" : ""}`}
           >
             About
           </Link>

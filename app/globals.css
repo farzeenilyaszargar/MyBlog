@@ -2,14 +2,14 @@
 @import "katex/dist/katex.min.css";
 
 :root {
-  --paper-bg: #f7f2e8;
-  --card-bg: #fffdfa;
-  --ink: #1f1f1f;
-  --muted: #67635e;
-  --line: #ddd4c8;
-  --code-inline-bg: #efe8dc;
-  --code-block-bg: #f4eee3;
-  --code-text: #1f1f1f;
+  --paper-bg: #f5ede1;
+  --card-bg: #fffaf1;
+  --ink: #2b2621;
+  --muted: #756b5f;
+  --line: #e1d5c5;
+  --code-inline-bg: #eee3d2;
+  --code-block-bg: #f1e7d8;
+  --code-text: #2b2621;
 }
 
 :root[data-theme="dark"] {
@@ -220,8 +220,13 @@ a {
 }
 
 .social-icon:hover {
-  color: #000000;
+  color: var(--ink);
   transform: rotate(-10deg);
+}
+
+::selection {
+  background: #dfcdb3;
+  color: var(--ink);
 }
 
 :root[data-theme="dark"] .profile-image {
