@@ -18,7 +18,7 @@ export default function Hero() {
             <div className="flex flex-col  sm:text-left text-center ">
                 <h1 className="font-title mt-2 text-4xl font-semibold max-sm:mt-0 max-sm:text-3xl">Hi, I&apos;m @farzeenilyaszargar</h1>
                 <p className="mt-3 text-base leading-8 text-[var(--muted)] max-sm:text-[15px] max-sm:leading-7">
-                    I like to write about programming, technology, and more. I also like building things and sharing my thoughts on the internet. 
+                    I like to write about programming, technology, and more.
                 </p>
                 <div className="mt-3 flex items-center gap-3 text-[var(--muted)] justify-start max-sm:justify-center">
                     <a href="https://x.com/farzeenilya" target="_blank" rel="noreferrer" aria-label="X" className="social-icon">
