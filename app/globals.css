@@ -36,9 +36,13 @@ body {
 }
 
 .font-title {
-  font-family: var(--font-playfair-display), "Times New Roman", serif !important;
+  font-family: var(--font-fraunces), "Times New Roman", serif !important;
   font-optical-sizing: auto;
   letter-spacing: -0.01em;
+}
+
+.font-ui {
+  font-family: var(--font-manrope), sans-serif;
 }
 
 a {
@@ -54,6 +58,7 @@ a {
   border-radius: 0.375rem;
   background: transparent;
   color: var(--muted);
+  font-family: var(--font-manrope), sans-serif;
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
   font-weight: 500;
@@ -82,7 +87,7 @@ a {
 .prose-block h4,
 .prose-block h5,
 .prose-block h6 {
-  font-family: var(--font-playfair-display), "Times New Roman", serif;
+  font-family: var(--font-fraunces), "Times New Roman", serif;
   color: var(--ink);
   font-weight: 700;
   letter-spacing: -0.01em;

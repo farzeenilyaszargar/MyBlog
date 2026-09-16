@@ -15,7 +15,7 @@ export default function Navbar() {
           fizzy
         </Link>
         
-        <div className="flex justify-between items-center gap-5">
+        <div className="font-ui flex justify-between items-center gap-5">
           <Link
             href="/about"
             className={`text-md font-medium text-gray-600 hover:text-gray-900 ${isAboutPage ? "underline decoration-2 underline-offset-4 decoration-wavy underline-gray-600" : ""}`}

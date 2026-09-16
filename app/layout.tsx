@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Source_Serif_4, Playfair_Display } from "next/font/google";
+import { Fraunces, Manrope, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 
 const siteUrl = "https://www.fizzy.blog";
@@ -11,9 +11,15 @@ const sourceSerif = Source_Serif_4({
   weight: ["400", "500", "600", "700"],
 });
 
-const playfairDisplay = Playfair_Display({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: "--font-playfair-display",
+  variable: "--font-fraunces",
+  weight: ["400", "500", "600", "700"],
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
   weight: ["400", "500", "600", "700"],
 });
 
@@ -100,7 +106,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${sourceSerif.variable} ${playfairDisplay.variable} h-full antialiased`}
+      className={`${sourceSerif.variable} ${fraunces.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
