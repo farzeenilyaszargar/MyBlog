@@ -65,7 +65,7 @@ export default function About() {
                         <svg
                             aria-hidden="true"
                             viewBox="0 0 16 16"
-                            className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-1"
+                            className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
                             fill="none"
                             stroke="currentColor"
                             strokeLinecap="round"
