@@ -2,7 +2,6 @@ import Navbar from "@/components/navbar"
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { projects } from "@/lib/projects";
 import Footer from "@/components/footer";
 import GitHubActivity from "@/components/github-activity";
 
@@ -100,43 +99,22 @@ export default function About() {
             </div>
 
             <div className="space-y-5 border-t border-[var(--line)] py-10">
-                <h2 className="font-title text-3xl font-semibold tracking-tight">Notable Projects & Companies</h2>
-                <p className="text-[var(--muted)]">
-                    Though I have worked on several projects and companies, here are some of the most notable ones.
-                </p>
-                <div className="grid gap-5 sm:grid-cols-2">
-                    {projects.map((project) => (
-                        <Link
-                            key={project.slug}
-                            href={`/projects/${project.slug}`}
-                            className="group relative block overflow-hidden rounded-2xl"
-                            aria-label={project.title}
-                        >
-                            <div className="relative">
-                                <Image
-                                    src={project.image}
-                                    alt={project.title}
-                                    width={640}
-                                    height={420}
-                                    sizes="(max-width: 640px) 100vw, 50vw"
-                                    className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                                />
-                                <div className="absolute inset-0 bg-black/35 transition-opacity duration-300" />
-                                <div className="absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                                <div className="absolute bottom-0 left-0 right-0 p-4">
-                                    <p className="font-title text-3xl font-semibold text-white transition-all duration-300">
-                                        {project.title}
-                                    </p>
-                                    <p className="mt-1 hidden translate-y-2 text-sm font-medium text-gray-200 transition-all duration-300 group-hover:block group-hover:translate-y-0">
-                                        {project.subtitle}
-                                    </p>
-                                </div>
-                            </div>
-                            
-                        </Link>
-                    ))}
-                </div>
-
+                <h2 className="font-title text-3xl font-semibold tracking-tight">Things I have built</h2>
+                <ul className="space-y-3 leading-8 text-[var(--muted)]">
+                    <li>🥱 <Link href="https://nap-code.com/" className="font-medium text-[var(--ink)] underline decoration-[var(--line)] underline-offset-4 hover:decoration-[var(--ink)]">Nap</Link> - agent that builds anything you want</li>
+                    <li>✈️ <Link href="https://www.superflights.co.in/" className="font-medium text-[var(--ink)] underline decoration-[var(--line)] underline-offset-4 hover:decoration-[var(--ink)]">SuperFlights</Link> - flight booking engine</li>
+                    <li>⏰ <Link href="https://sip-and-focus-8fbjfc58h-farzeenilyaszargars-projects.vercel.app/" className="font-medium text-[var(--ink)] underline decoration-[var(--line)] underline-offset-4 hover:decoration-[var(--ink)]">Sip &amp; Focus Pomodoro Timer</Link> - basic timer with classical music</li>
+                    <li>📰 <Link href="https://thelightpost.vercel.app/" className="font-medium text-[var(--ink)] underline decoration-[var(--line)] underline-offset-4 hover:decoration-[var(--ink)]">LightPost News App</Link> - news feed using AI, APIs, and ranking algorithms</li>
+                    <li>👕 <Link href="https://www.lunoirwear.com/" className="font-medium text-[var(--ink)] underline decoration-[var(--line)] underline-offset-4 hover:decoration-[var(--ink)]">Lunoir Wear Merchandise Store</Link> - online merchandise enterprise</li>
+                    <li>📈 <Link href="https://www.github.com/farzeenilyaszargar/quant" className="font-medium text-[var(--ink)] underline decoration-[var(--line)] underline-offset-4 hover:decoration-[var(--ink)]">Quant Algo</Link> - my personal quant trading bot</li>
+                    <li>📚 <Link href="https://tayyari.online" className="font-medium text-[var(--ink)] underline decoration-[var(--line)] underline-offset-4 hover:decoration-[var(--ink)]">Tayyari | Do JEE Prep</Link> - a JEE preparation AI questionnaire</li>
+                    <li>🧑‍💻 <Link href="https://fizlint.vercel.app/" className="font-medium text-[var(--ink)] underline decoration-[var(--line)] underline-offset-4 hover:decoration-[var(--ink)]">Fizlint</Link> - a live linting CLI tool for JS and TS</li>
+                    <li>📷 <Link href="https://itemio.vercel.app" className="font-medium text-[var(--ink)] underline decoration-[var(--line)] underline-offset-4 hover:decoration-[var(--ink)]">Itemio</Link> - identify products from photos, estimate their value, and find marketplace listings</li>
+                    <li>⚖️ <Link href="https://caseway.vercel.app" className="font-medium text-[var(--ink)] underline decoration-[var(--line)] underline-offset-4 hover:decoration-[var(--ink)]">Caseway</Link> - AI tooling for automating legal and government workflows</li>
+                    <li>📰 <Link href="https://morvane.vercel.app/" className="font-medium text-[var(--ink)] underline decoration-[var(--line)] underline-offset-4 hover:decoration-[var(--ink)]">Morvane</Link> - experimental software project</li>
+                    <li>📰 <Link href="https://stackflux.online" className="font-medium text-[var(--ink)] underline decoration-[var(--line)] underline-offset-4 hover:decoration-[var(--ink)]">Stackflux</Link> - discover and read interesting articles about software, engineering, and technology</li>
+                    <li>✨ <Link href="https://www.glametric.fun/" className="font-medium text-[var(--ink)] underline decoration-[var(--line)] underline-offset-4 hover:decoration-[var(--ink)]">Glammetrics</Link> - AI-powered facial analysis and appearance scoring</li>
+                </ul>
             </div>
             <Footer />
         </div>
