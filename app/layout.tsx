@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Manrope, Source_Serif_4 } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const siteUrl = "https://www.fizzy.blog";
@@ -108,7 +109,10 @@ export default function RootLayout({
       lang="en"
       className={`${sourceSerif.variable} ${fraunces.variable} ${manrope.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
