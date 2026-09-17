@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Hero() {
     return (
-        <section className="flex items-center justify-between gap-5 border-b border-t border-[var(--line)] py-7 max-sm:flex-col max-sm:items-center max-sm:gap-4 max-sm:py-5">
+        <section className="flex items-center justify-center gap-8 border-b border-t border-[var(--line)] py-7 max-sm:flex-col max-sm:items-center max-sm:gap-4 max-sm:py-5 sm:gap-10">
             <Image
                 src="/home-profile.png"
                 alt="Farzeen Ilyas Zargar"
