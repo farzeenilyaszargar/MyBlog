@@ -74,7 +74,7 @@ export default function ThemeToggle() {
       <Image
         src={theme === "light" ? "/dark.png" : "/light.png"}
         alt={theme === "light" ? "Dark mode" : "Light mode"}
-        width={22}
+        width={theme === "light" ? 18 : 22}
         height={theme === "light" ? 18 : 22}
         className={isSunIcon ? "invert" : ""}
         sizes="22px"
