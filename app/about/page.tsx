@@ -52,7 +52,7 @@ export default function About() {
             <div className="flex flex-col gap-8 border-t border-[var(--line)] py-10 sm:flex-row">
                 <div className="flex flex-col gap-8 sm:w-2/3">
                     <h1 className="font-title text-4xl font-bold tracking-tight">About Me</h1>
-                    <p className="text-lg text-[var(--muted)]">
+                    <p className="text-lg text-[var(--ink)]">
                         hi 👋 i am a developer from delhi building cool stuff. i love ml, math, computers and philosophy. currently contemplating the machinations of reality. i enjoy turning abstract ideas into useful products, learning in public, and following questions that sit at the edge of technology and human curiosity.
                     </p>
                     <Link
