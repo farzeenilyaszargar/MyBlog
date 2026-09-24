@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     url: "/",
     images: [
       {
-        url: "/social-screenshot.png",
+                url: "/og-preview.png",
                 width: 1620,
                 height: 1102,
         alt: "Journey At Mumbai by Farzeen Ilyas Zargar",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Farzeen's Blog",
     description: "Personal essays and notes by Farzeen Ilyas Zargar on startups, software, AI tools, distribution, and building things on the internet.",
-    images: ["/social-screenshot.png"],
+        images: ["/og-preview.png"],
   },
 };
 
