@@ -72,7 +72,7 @@ export default function ThemeToggle() {
       title={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
     >
       <Image
-        src={theme === "light" ? "/dark.png" : "/light.png"}
+        src={theme === "light" ? "/dark.webp" : "/light.webp"}
         alt={theme === "light" ? "Dark mode" : "Light mode"}
         width={theme === "light" ? 18 : 22}
         height={theme === "light" ? 18 : 22}

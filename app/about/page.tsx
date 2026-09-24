@@ -78,7 +78,7 @@ export default function About() {
                 </div>
                 <div className="mx-auto sm:ml-10 sm:w-1/3">
                     <Image
-                        src="/about-profile.png"
+                        src="/about-profile.webp"
                         alt="Farzeen Ilyas Zargar"
                         width={400}
                         height={600}

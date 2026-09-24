@@ -7,16 +7,16 @@ export default function Footer() {
       <p className="max-sm:text-xs">© {new Date().getFullYear()} Farzeen Ilyas Zargar</p>
       <div className=" items-center gap-3 text-[var(--muted)] sm:flex hidden">
         <Link href="https://x.com/farzeenilya" target="_blank" rel="noreferrer" aria-label="X" className="social-icon">
-          <Image src="/x.png" alt="X" width={24} height={24} />
+          <Image src="/x.webp" alt="X" width={24} height={24} />
         </Link>
         <Link href="https://github.com/farzeenilya" target="_blank" rel="noreferrer" aria-label="GitHub" className="social-icon">
-          <Image src="/github.png" alt="GitHub" width={24} height={24} />
+          <Image src="/github.webp" alt="GitHub" width={24} height={24} />
         </Link>
         <Link href="https://linkedin.com/in/farzeenilya" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="social-icon">
-          <Image src="/linkedin.png" alt="LinkedIn" width={24} height={24} />
+          <Image src="/linkedin.webp" alt="LinkedIn" width={24} height={24} />
         </Link>
         <Link href="mailto:farzeenilyaszargar@gmail.com" aria-label="Email" className="social-icon">
-          <Image src="/email.png" alt="Email" width={24} height={24} />
+          <Image src="/email.webp" alt="Email" width={24} height={24} />
         </Link>
       </div>
     </footer>

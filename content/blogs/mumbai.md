@@ -56,7 +56,7 @@ We pivoted later down the line after two months in Mumbai. The AI boom was in fu
 
 Marketing is hard! The best form of it is organic but it works seldom organically. Generally in social platforms products work only when they have a huge marketing budgets. This is because in its very raw form, you pump money, you paint the town red, you get eyeballs of people who want the product, then its ooh-lala. We tried this at first with our ₹10,000 and here are the results.
 
-![SuperFlights ad performance stats](/adstats.png)
+![SuperFlights ad performance stats](/adstats.webp)
 
 A lot more of this is not something a poor indie startup can afford, so startups generally (non-funded ones at least) use alternate strategies. These include ragebaiting (Cluely), publishing scientific/technical papers to gain credibility, founders building communities and audiences around themselves (DHH -> Omarchy), open-sourcing their products (Supabase), and building in public on Twitter.
 
