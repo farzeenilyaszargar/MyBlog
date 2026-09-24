@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/social-screenshot.png",
-        width: 1200,
-        height: 630,
+                width: 1620,
+                height: 1102,
         alt: "Journey At Mumbai by Farzeen Ilyas Zargar",
       },
     ],

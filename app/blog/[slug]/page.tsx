@@ -61,8 +61,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: [
         {
           url: "/social-screenshot.png",
-          width: 1200,
-          height: 630,
+          width: 1620,
+          height: 1102,
           alt: `${post.title} by Farzeen Ilyas Zargar`,
         },
       ],
