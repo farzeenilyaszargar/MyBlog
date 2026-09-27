@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const siteUrl = "https://www.fizzy.blog";
-const ogImagePath = "/blog-social-card.png";
+const ogImagePath = "/blog-social-card.webp";
 
 const sourceSerif = Source_Serif_4({
   subsets: ["latin"],

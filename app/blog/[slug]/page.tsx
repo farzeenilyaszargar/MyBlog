@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       publishedTime: post.date,
       images: [
         {
-          url: "/blog-social-card.png",
+          url: "/blog-social-card.webp",
           width: 1874,
           height: 1094,
           alt: `${post.title} by Farzeen Ilyas Zargar`,
@@ -71,7 +71,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: "summary_large_image",
       title: post.title,
       description: post.summary,
-      images: ["/blog-social-card.png"],
+      images: ["/blog-social-card.webp"],
     },
   };
 }
@@ -105,7 +105,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       "@type": "WebPage",
       "@id": `https://www.fizzy.blog/blog/${post.slug}`,
     },
-    image: "https://www.fizzy.blog/blog-social-card.png",
+    image: "https://www.fizzy.blog/blog-social-card.webp",
     keywords: post.keywords.length > 0 ? post.keywords.join(", ") : post.tags.join(", "),
   };
 

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     url: "/",
     images: [
       {
-                url: "/blog-social-card.png",
+                url: "/blog-social-card.webp",
                 width: 1874,
                 height: 1094,
         alt: "Farzeen Ilyas Zargar portfolio preview",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Farzeen's Blog",
     description: "Personal essays and notes by Farzeen Ilyas Zargar on startups, software, AI tools, distribution, and building things on the internet.",
-        images: ["/blog-social-card.png"],
+        images: ["/blog-social-card.webp"],
   },
 };
 
