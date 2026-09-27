@@ -29,10 +29,10 @@ export const metadata: Metadata = {
         url: "/about",
         images: [
             {
-                url: "/og-preview.png",
-                width: 1620,
-                height: 1102,
-                alt: "Journey At Mumbai by Farzeen Ilyas Zargar",
+                url: "/social-preview.png",
+                width: 1874,
+                height: 1094,
+                alt: "Farzeen Ilyas Zargar portfolio preview",
             },
         ],
     },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "About Farzeen Ilyas Zargar",
         description: "About Farzeen Ilyas Zargar, a software developer building startups, AI tools, web products, and open-source experiments.",
-        images: ["/og-preview.png"],
+        images: ["/social-preview.png"],
     },
 };
 

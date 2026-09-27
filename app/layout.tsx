@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const siteUrl = "https://www.fizzy.blog";
-const ogImagePath = "/og-preview.png";
+const ogImagePath = "/social-preview.png";
 
 const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
@@ -74,9 +74,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: ogImagePath,
-        width: 1620,
-        height: 1102,
-        alt: "Journey At Mumbai by Farzeen Ilyas Zargar",
+        width: 1874,
+        height: 1094,
+        alt: "Farzeen Ilyas Zargar portfolio preview",
       },
     ],
   },
