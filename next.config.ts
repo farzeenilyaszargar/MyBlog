@@ -4,6 +4,15 @@ import type { NextConfig } from "next";
 const projectRoot = fileURLToPath(new URL(".", import.meta.url));
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/blog/building-unleaf-in-public",
+        destination: "/blog/eyeballs",
+        permanent: true,
+      },
+    ];
+  },
   turbopack: {
     root: projectRoot,
   },
