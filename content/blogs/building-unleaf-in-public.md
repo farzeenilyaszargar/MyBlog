@@ -1,7 +1,7 @@
 ---
-title: "Eyeballs is all you need"
+title: "Eyeballs Is All You Need"
 date: "2026-10-13"
-summary: "I built Unleaf in 30 mins, spent $4 experimenting with distribution, and launched on Twitter and Product Hunt. A few thoughts on eyeballs, virality and getting people to your product."
+summary: "I built Unleaf in 30 mins, promoted two tweets for $2 each and got around 40K views for $4 total. A few thoughts on eyeballs, virality and launching on Product Hunt."
 tags:
   - unleaf
   - building in public
@@ -37,11 +37,11 @@ This is the actual editor at [unleaf.lol](https://unleaf.lol/). I was writing ab
 
 On September 27 I put it on Twitter. I wrote that Overleaf made LaTeX feel like enterprise software, so I made Unleaf. No login. No workspace. No clutter.
 
-Then I tried ads. In total I spent $4 on the whole experiment. That was it. Four dollars to see what would happen.
+I posted two tweets and put both of them on ads. I spent \$2 per tweet, \$4 in total, and got around 40K views across the two tweets. That was it. Four dollars to see what would happen.
 
 ![September 27 Unleaf launch tweet showing 6 replies, 2 reposts, 52 likes and approximately 21K views](/blog-assets/unleaf/launch-tweet.webp)
 
-The tweet had around 21K views, 52 likes, 6 replies and 2 reposts when I took this screenshot on October 13. For such a small experiment I thought that was interesting. People had seen the thing. Some of them even went to the site.
+The screenshot above is of one of those two tweets. It had around 21K views, 52 likes, 6 replies and 2 reposts when I took it on October 13. Across both tweets the views came to around 40K. For \$4 in total I thought that was interesting. People had seen the thing. Some of them even went to the site.
 
 The analytics for the last 30 days showed 238 visitors, 340 page views and an 84% bounce rate. There was a spike around the launch and then it fell off. You can see it here.
 
@@ -53,11 +53,11 @@ Twitter was the biggest named source. t.co brought 93 visitors. Google brought 8
 
 So Twitter worked in the sense that it brought people to the site. The screenshots combine the launch and the traffic around it; they do not separate the paid visitors from the organic ones. I also did not track how many of those people compiled a document or exported a PDF. These are visitors, not a count of people who kept using Unleaf.
 
-But I kept thinking about the $4. What if I had spent x10 or x100 more? $40 or $400. What happens when you keep pumping money into the thing, like bigger companies do with much larger budgets?
+But I kept thinking about the \$4. What if I had spent x10 or x100 more? \$40 or \$400. What happens when you keep pumping money into the thing, like bigger companies do with much larger budgets?
 
 I felt that with that kind of push I could have had a hit product. More eyeballs would inevitably bring some more people to my site. That was my thinking, though I did not run the bigger experiment, and I cannot assume that spending ten times more would give exactly ten times the traffic or make people stay.
 
-Still, it made me think about how different the game looks when you can afford to keep buying attention. I stopped at $4. Someone else can keep painting the town red until everyone has heard the name.
+Still, it made me think about how different the game looks when you can afford to keep buying attention. I stopped at \$4. Someone else can keep painting the town red until everyone has heard the name.
 
 ### Product Hunt
 
@@ -77,7 +77,7 @@ Then the same product is on Product Hunt and somehow it tops the day and the wee
 
 If a company has ten employees, especially active ones, it already has people who can comment, share and bring their own circles into the post. The same Twitter community can show up on Product Hunt too. It is a lot easier to create momentum when you have people around you from the beginning.
 
-I had written in my notes that maybe someone spends $200 and gets around 200K views. That was a rough thought, not something I measured here. But the thought behind it was simple. What looks like sudden organic attention might have money and planning behind it.
+I had written in my notes that maybe someone spends \$200 and gets around 200K views. That was a rough thought, not something I measured here. But the thought behind it was simple. What looks like sudden organic attention might have money and planning behind it.
 
 I also have a theory that some people are paid to post things in these tech circles and massive Discord servers. People tweet, repost and quote in multitudes and the thing starts looking mainstream. Maybe it is a side income for some of them. I do not have proof of that happening in any particular launch, or of people using multiple accounts to vote. It is my theory from watching how these things unfold.
 
@@ -87,6 +87,6 @@ And once a thing is everywhere, more people look at it because everyone else is 
 
 I think this is why I keep coming back to distribution. You can build something useful in 30 mins now. But if nobody sees it, it is still just sitting somewhere on the internet. Gold in a desert.
 
-This was a small experiment. $4, a tweet, a Product Hunt launch and a product I wanted to use myself. I wanted to see what would happen instead of just thinking about it. These are the results.
+This was a small experiment. Two tweets, \$2 of ads on each, around 40K views, a Product Hunt launch and a product I wanted to use myself. I wanted to see what would happen instead of just thinking about it. These are the results.
 
 You can try it at [unleaf.lol](https://unleaf.lol/).
