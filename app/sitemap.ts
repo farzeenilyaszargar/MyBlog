@@ -6,7 +6,7 @@ const baseUrl = "https://www.fizzy.blog";
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const postEntries = getAllPosts().map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
+    url: `${baseUrl}/${post.slug}`,
     lastModified: post.date ? new Date(post.date) : now,
     changeFrequency: "weekly" as const,
     priority: 0.7,

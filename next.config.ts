@@ -24,7 +24,12 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/blog/building-unleaf-in-public",
-        destination: "/blog/eyeballs",
+        destination: "/eyeballs",
+        permanent: true,
+      },
+      {
+        source: "/blog/:slug",
+        destination: "/:slug",
         permanent: true,
       },
     ];

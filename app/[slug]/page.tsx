@@ -53,13 +53,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: post.summary,
     keywords: post.keywords.length > 0 ? post.keywords : post.tags,
     alternates: {
-      canonical: `/blog/${post.slug}`,
+      canonical: `/${post.slug}`,
     },
     openGraph: {
       type: "article",
       title: post.title,
       description: post.summary,
-      url: `/blog/${post.slug}`,
+      url: `/${post.slug}`,
       publishedTime: post.date,
       images: [
         {
@@ -106,7 +106,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://www.fizzy.blog/blog/${post.slug}`,
+      "@id": `https://www.fizzy.blog/${post.slug}`,
     },
     image: "https://www.fizzy.blog/blog-social-card.webp",
     keywords: post.keywords.length > 0 ? post.keywords.join(", ") : post.tags.join(", "),

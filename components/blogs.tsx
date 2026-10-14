@@ -17,7 +17,7 @@ export default function Blogs() {
       {posts.map((post) => (
         <article key={post.slug} className="py-1 max-sm:py-0">
           <h3 className="font-title mt-2 text-2xl font-medium leading-tight max-sm:text-xl">
-            <Link href={`/blog/${post.slug}`} className="hover:underline">
+            <Link href={`/${post.slug}`} className="hover:underline">
               {post.title}
             </Link>
           </h3>
