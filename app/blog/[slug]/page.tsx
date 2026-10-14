@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
@@ -9,7 +9,10 @@ import remarkMath from "remark-math";
 import { getPostBySlug, getPostSlugs } from "@/lib/posts";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import ArticleVideoWork from "@/components/article-video-work";
+import BlogImage from "@/components/blog-image";
+import "katex/dist/katex.min.css";
+
+const ArticleVideoWork = dynamic(() => import("@/components/article-video-work"));
 
 type Params = {
   slug: string;
@@ -146,9 +149,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   </a>
                 );
               },
-              img: ({ src, alt }) => (
-                <img src={src ?? ""} alt={alt ?? ""} loading="lazy" decoding="async" />
-              ),
+              img: BlogImage,
             }}
           >
             {contentBlocks[0]}
@@ -180,9 +181,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                       </a>
                     );
                   },
-                  img: ({ src, alt }) => (
-                    <img src={src ?? ""} alt={alt ?? ""} loading="lazy" decoding="async" />
-                  ),
+                  img: BlogImage,
                 }}
               >
                 {contentBlocks.slice(1).join("[[VIDEO_WORK]]")}

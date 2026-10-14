@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Manrope, Source_Serif_4 } from "next/font/google";
+import { Source_Serif_4 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
@@ -9,18 +9,6 @@ const ogImagePath = "/blog-social-card.webp";
 const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
   variable: "--font-source-serif",
-  weight: ["400", "500", "600", "700"],
-});
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-fraunces",
-  weight: ["400", "500", "600", "700"],
-});
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
   weight: ["400", "500", "600", "700"],
 });
 
@@ -107,7 +95,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${sourceSerif.variable} ${fraunces.variable} ${manrope.variable} h-full antialiased`}
+      className={`${sourceSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         {children}
