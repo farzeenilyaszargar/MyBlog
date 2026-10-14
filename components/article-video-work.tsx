@@ -46,35 +46,17 @@ function LazyVideo({ src, title, aspectRatio }: (typeof videoAssets)[number]) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [hasEnteredViewport, setHasEnteredViewport] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [allowAutoplay, setAllowAutoplay] = useState(false);
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
-    const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const connection = (navigator as Navigator & {
-      connection?: EventTarget & { saveData?: boolean };
-    }).connection;
-    const updatePreferences = () => {
-      setAllowAutoplay(!motionPreference.matches && !connection?.saveData);
-    };
-    const initialPreferences = globalThis.setTimeout(updatePreferences, 0);
-    motionPreference.addEventListener("change", updatePreferences);
-    connection?.addEventListener("change", updatePreferences);
-    const cleanPreferences = () => {
-      globalThis.clearTimeout(initialPreferences);
-      motionPreference.removeEventListener("change", updatePreferences);
-      connection?.removeEventListener("change", updatePreferences);
-    };
-
     if (!("IntersectionObserver" in window)) {
-      // Older browsers get manual playback rather than eager autoplay downloads.
-      const fallback = globalThis.setTimeout(() => setHasEnteredViewport(true), 0);
-      return () => {
-        globalThis.clearTimeout(fallback);
-        cleanPreferences();
-      };
+      const fallback = globalThis.setTimeout(() => {
+        setHasEnteredViewport(true);
+        setIsVisible(true);
+      }, 0);
+      return () => globalThis.clearTimeout(fallback);
     }
 
     const observer = new IntersectionObserver(
@@ -90,7 +72,6 @@ function LazyVideo({ src, title, aspectRatio }: (typeof videoAssets)[number]) {
     observer.observe(container);
     return () => {
       observer.disconnect();
-      cleanPreferences();
     };
   }, []);
 
@@ -100,9 +81,9 @@ function LazyVideo({ src, title, aspectRatio }: (typeof videoAssets)[number]) {
     const updatePlayback = () => {
       if (!isVisible || document.hidden) {
         video.pause();
-      } else if (allowAutoplay) {
+      } else {
         void video.play().catch(() => {
-          // Playback controls remain available if the browser blocks autoplay.
+          // Some browsers can still block muted autoplay.
         });
       }
     };
@@ -112,7 +93,7 @@ function LazyVideo({ src, title, aspectRatio }: (typeof videoAssets)[number]) {
       document.removeEventListener("visibilitychange", updatePlayback);
       video.pause();
     };
-  }, [hasEnteredViewport, isVisible, allowAutoplay]);
+  }, [hasEnteredViewport, isVisible]);
 
   return (
     <div
@@ -125,10 +106,12 @@ function LazyVideo({ src, title, aspectRatio }: (typeof videoAssets)[number]) {
           ref={videoRef}
           className="block h-full w-full object-contain"
           poster={`${src}-poster.webp`}
-          controls
+          autoPlay
           muted
           loop
           playsInline
+          disablePictureInPicture
+          disableRemotePlayback
           preload="none"
           aria-label={title}
         >
