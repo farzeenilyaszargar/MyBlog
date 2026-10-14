@@ -7,6 +7,7 @@ import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import { getPostBySlug, getPostSlugs } from "@/lib/posts";
+import { socialImage } from "@/lib/social-image";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import BlogImage from "@/components/blog-image";
@@ -61,20 +62,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: post.summary,
       url: `/${post.slug}`,
       publishedTime: post.date,
-      images: [
-        {
-          url: "/blog-social-card.webp",
-          width: 1874,
-          height: 1094,
-          alt: `${post.title} by Farzeen Ilyas Zargar`,
-        },
-      ],
+      images: [socialImage],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.summary,
-      images: ["/blog-social-card.webp"],
+      images: [socialImage.url],
     },
   };
 }
@@ -108,7 +102,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       "@type": "WebPage",
       "@id": `https://www.fizzy.blog/${post.slug}`,
     },
-    image: "https://www.fizzy.blog/blog-social-card.webp",
+    image: socialImage.url,
     keywords: post.keywords.length > 0 ? post.keywords.join(", ") : post.tags.join(", "),
   };
 

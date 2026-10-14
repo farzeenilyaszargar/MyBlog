@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Source_Serif_4 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { socialImage } from "@/lib/social-image";
 import "./globals.css";
 
 const siteUrl = "https://www.fizzy.blog";
-const ogImagePath = "/blog-social-card.webp";
 
 const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
@@ -59,20 +59,13 @@ export const metadata: Metadata = {
     title: "Farzeen's Blog",
     description: "Blogs by Farzeen Ilyas Zargar. Notes, research, and thoughts on various topics.",
     siteName: "Farzeen's Blog",
-    images: [
-      {
-        url: ogImagePath,
-        width: 1874,
-        height: 1094,
-        alt: "Farzeen Ilyas Zargar portfolio preview",
-      },
-    ],
+    images: [socialImage],
   },
   twitter: {
     card: "summary_large_image",
     title: "Farzeen's Blog",
     description: "Blogs by Farzeen Ilyas Zargar. Notes, research, and thoughts on various topics.",
-    images: [ogImagePath],
+    images: [socialImage.url],
   },
   robots: {
     index: true,

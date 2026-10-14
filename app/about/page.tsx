@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Footer from "@/components/footer";
 import GitHubActivity from "@/components/github-activity";
+import { socialImage } from "@/lib/social-image";
 
 export const metadata: Metadata = {
     title: "About Farzeen Ilyas Zargar",
@@ -27,20 +28,13 @@ export const metadata: Metadata = {
         title: "About Farzeen Ilyas Zargar",
         description: "About Farzeen Ilyas Zargar, a software developer building startups, AI tools, web products, and open-source experiments.",
         url: "/about",
-        images: [
-            {
-                url: "/blog-social-card.webp",
-                width: 1874,
-                height: 1094,
-                alt: "Farzeen Ilyas Zargar portfolio preview",
-            },
-        ],
+        images: [socialImage],
     },
     twitter: {
         card: "summary_large_image",
         title: "About Farzeen Ilyas Zargar",
         description: "About Farzeen Ilyas Zargar, a software developer building startups, AI tools, web products, and open-source experiments.",
-        images: ["/blog-social-card.webp"],
+        images: [socialImage.url],
     },
 };
 

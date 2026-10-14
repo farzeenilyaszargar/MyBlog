@@ -3,6 +3,7 @@ import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
+import { socialImage } from "@/lib/social-image";
 
 export const metadata: Metadata = {
   title: "Farzeen's Blog",
@@ -25,20 +26,13 @@ export const metadata: Metadata = {
     title: "Farzeen's Blog",
     description: "Personal essays and notes by Farzeen Ilyas Zargar on startups, software, AI tools, distribution, and building things on the internet.",
     url: "/",
-    images: [
-      {
-                url: "/blog-social-card.webp",
-                width: 1874,
-                height: 1094,
-        alt: "Farzeen Ilyas Zargar portfolio preview",
-      },
-    ],
+    images: [socialImage],
   },
   twitter: {
     card: "summary_large_image",
     title: "Farzeen's Blog",
     description: "Personal essays and notes by Farzeen Ilyas Zargar on startups, software, AI tools, distribution, and building things on the internet.",
-        images: ["/blog-social-card.webp"],
+    images: [socialImage.url],
   },
 };
 
