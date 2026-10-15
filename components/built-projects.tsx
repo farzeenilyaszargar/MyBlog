@@ -2,27 +2,19 @@ const projects = [
   { icon: "🥱", name: "Nap", url: "https://nap-code.com/", description: "run your agents anywhere anytime", milestone: "+3k users" },
   { icon: "✈️", name: "SuperFlights", url: "https://www.superflights.co.in/", description: "optimised flight booking", milestone: "₹25 Lakh raised" },
   { icon: "☘️", name: "Unleaf", url: "https://www.unleaf.lol/", description: "online LaTex editor which compiles instantaneously", milestone: "+1k users" },
-  { icon: "📰", name: "News App", url: "https://thelightpost.vercel.app/", description: "news feed using ai, api's and ranking algos" },
-  { icon: "👕", name: "Lunoir Store", url: "https://www.lunoirwear.com/", description: "online merchandise enterprise" },
-  { icon: "📈", name: "Quant Algo", url: "https://www.github.com/farzeenilyaszargar/quant", description: "my personal quant trading bot" },
   { icon: "📚", name: "Tayyari | Do JEE Prep", url: "https://tayyari.online", description: "a jee preparation ai questionaiare", milestone: "~200 users", note: "Need to optimise and build better iteration" },
   { icon: "🧑‍💻", name: "Fizlint", url: "https://fizlint.vercel.app/", description: "a live linting cli tool for js and ts" },
   { icon: "📷", name: "Itemio", url: "https://itemio.vercel.app", description: "identify products from photos, estimate their value, and find marketplace listings" },
   { icon: "⚖️", name: "Caseway", url: "https://caseway.vercel.app", description: "AI tooling for automating legal and government workflows", note: "underrated project, could scale well" },
-  { icon: "📰", name: "Morvane", url: "https://morvane.vercel.app/", description: "techcrunch website lookalike!" },
   { icon: "⏰", name: "Promodoro Timer", url: "https://sip-and-focus-8fbjfc58h-farzeenilyaszargars-projects.vercel.app/", description: "basic ass timer with classical music" },
   { icon: "📰", name: "Stackflux", url: "https://stackflux.online", description: "discover and read interesting articles about software, engineering, and technology. just a tech blog." },
   { icon: "✨", name: "Glammetrics", url: "https://www.glametric.fun/", description: "AI-powered facial analysis and appearance scoring", note: "exploring insta ads and products" },
-  { icon: "𝕏", name: "XExtension", url: "https://github.com/farzeenilyaszargar/XExtension", description: "analytics and see stats inline extension on the app itself" },
 ];
 
 export default function BuiltProjects() {
   return (
     <section className="border-t border-[var(--line)] py-10" aria-labelledby="built-projects-title">
-      <div className="mb-5 flex flex-wrap items-baseline justify-between gap-3">
-        <h2 id="built-projects-title" className="font-title text-3xl font-semibold tracking-tight">Things I have built</h2>
-        <span className="text-sm text-[var(--muted)]">{projects.length} projects</span>
-      </div>
+      <h2 id="built-projects-title" className="mb-5 font-title text-3xl font-semibold tracking-tight">Things I have built</h2>
       <ul className="divide-y divide-[var(--line)]">
         {projects.map((project) => (
           <li key={project.name}>
