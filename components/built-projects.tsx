@@ -22,12 +22,12 @@ export default function BuiltProjects() {
               href={project.url}
               target={project.url.startsWith("/") ? undefined : "_blank"}
               rel={project.url.startsWith("/") ? undefined : "noopener noreferrer"}
-              className="group grid grid-cols-[2rem_minmax(0,1fr)] items-start gap-3 rounded-sm py-5 transition-colors hover:bg-[var(--card-bg)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--ink)] motion-reduce:transition-none"
+              className="grid grid-cols-[2rem_minmax(0,1fr)] items-start gap-3 rounded-sm py-5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--ink)]"
             >
               <Image src={`/project-icons/${project.icon}.webp`} alt="" width={32} height={32} className="mt-0.5 h-8 w-8 rounded-md object-contain" />
               <div className="min-w-0">
                 <div className="flex items-center gap-3">
-                  <h3 className="min-w-0 text-lg font-medium leading-7 text-[var(--ink)] group-hover:underline decoration-[var(--line)] underline-offset-4">{project.name}</h3>
+                  <h3 className="min-w-0 text-lg font-medium leading-7 text-[var(--ink)]">{project.name}</h3>
                   {project.milestones ? (
                     <div className="ml-auto flex shrink-0 items-center justify-end gap-2">
                       {project.milestones.map((milestone) => (
