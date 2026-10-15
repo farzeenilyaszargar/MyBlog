@@ -28,9 +28,13 @@ export default function BuiltProjects() {
               <div className="min-w-0">
                 <div className="flex items-center gap-3">
                   <h3 className="min-w-0 text-lg font-medium leading-7 text-[var(--ink)] group-hover:underline decoration-[var(--line)] underline-offset-4">{project.name}</h3>
-                  {project.milestones?.map((milestone) => (
-                    <span key={milestone} className="inline-flex shrink-0 items-center rounded-full border border-[var(--resume-border)] bg-[var(--resume-bg)] px-2.5 py-0.5 text-xs font-semibold leading-5 text-[var(--resume-ink)]">{milestone}</span>
-                  ))}
+                  {project.milestones ? (
+                    <div className="ml-auto flex shrink-0 items-center justify-end gap-2">
+                      {project.milestones.map((milestone) => (
+                        <span key={milestone} className="inline-flex items-center rounded-full border border-[var(--resume-border)] bg-[var(--resume-bg)] px-2.5 py-0.5 text-xs font-semibold leading-5 text-[var(--resume-ink)]">{milestone}</span>
+                      ))}
+                    </div>
+                  ) : null}
                 </div>
                 <div className="mt-1 text-base leading-7 text-[var(--muted)]">
                   <p>{project.description}</p>
