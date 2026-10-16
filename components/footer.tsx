@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="mb-4 flex flex-wrap items-center justify-between gap-2 border-t border-[var(--line)] pt-4 text-sm max-sm:flex-col max-sm:items-start max-sm:gap-3">
       <p className="max-sm:text-xs">© {new Date().getFullYear()} Farzeen Ilyas Zargar</p>
       <div className=" items-center gap-3 text-[var(--muted)] sm:flex hidden">
-        <Link href="https://x.com/farzeenilya" target="_blank" rel="noreferrer" aria-label="X" className="social-icon">
+        <Link href="https://x.com/farilyaz" target="_blank" rel="noreferrer" aria-label="X" className="social-icon">
           <Image src="/x.webp" alt="X" width={24} height={24} />
         </Link>
         <Link href="https://github.com/farzeenilya" target="_blank" rel="noreferrer" aria-label="GitHub" className="social-icon">

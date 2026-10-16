@@ -21,7 +21,7 @@ export default function Hero() {
                     I like to write about programming, technology, and more.
                 </p>
                 <div className="mt-3 flex items-center gap-3 text-[var(--muted)] justify-start max-sm:justify-center">
-                    <a href="https://x.com/farzeenilya" target="_blank" rel="noreferrer" aria-label="X" className="social-icon">
+                    <a href="https://x.com/farilyaz" target="_blank" rel="noreferrer" aria-label="X" className="social-icon">
                         <Image src="/x.webp" alt="X" width={24} height={24} />
                     </a>
                     <a href="https://github.com/farzeenilyaszargar" target="_blank" rel="noreferrer" aria-label="GitHub" className="social-icon">
