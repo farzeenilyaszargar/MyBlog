@@ -9,6 +9,7 @@ const projects = [
   { icon: "itemio", name: "Itemio", url: "https://itemio.vercel.app", description: "identify products from photos, estimate their value, and find marketplace listings" },
   { icon: "caseway", name: "Caseway", url: "https://caseway.vercel.app", description: "AI tooling for automating legal and government workflows", note: "underrated project, could scale well" },
   { icon: "glammetrics", name: "Glammetrics", url: "https://www.glametric.fun/", description: "AI-powered facial analysis and appearance scoring", note: "exploring insta ads and products" },
+  { icon: "lightpost", name: "Lightpost", url: "https://lightpostt.vercel.app/", description: "the news app that updates info live and fun games" },
 ];
 
 export default function BuiltProjects() {
