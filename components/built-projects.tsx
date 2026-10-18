@@ -10,6 +10,7 @@ const projects = [
   { icon: "caseway", name: "Caseway", url: "https://caseway.vercel.app", description: "AI tooling for automating legal and government workflows", note: "underrated project, could scale well" },
   { icon: "glammetrics", name: "Glammetrics", url: "https://www.glametric.fun/", description: "AI-powered facial analysis and appearance scoring", note: "exploring insta ads and products" },
   { icon: "lightpost", name: "Lightpost", url: "https://lightpostt.vercel.app/", description: "the news app that updates info live and fun games" },
+  { icon: "lunoir", name: "Lunoir", url: "https://lunoir.vercel.app/", description: "my first next.js app ever with animations and merchandise" },
 ];
 
 export default function BuiltProjects() {
