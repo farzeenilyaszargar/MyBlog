@@ -28,12 +28,12 @@ export default function BuiltProjects() {
             >
               <Image src={`/project-icons/${project.icon}.webp`} alt="" width={32} height={32} data-invert-in-light={project.invertInLight || undefined} className="mt-0.5 h-8 w-8 rounded-md object-contain" />
               <div className="min-w-0">
-                <div className="flex items-center gap-3">
-                  <h3 className="min-w-0 text-lg font-medium leading-7 text-[var(--ink)]">{project.name}</h3>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                  <h3 className="max-w-full shrink-0 break-words text-lg font-medium leading-7 text-[var(--ink)]">{project.name}</h3>
                   {project.milestones ? (
-                    <div className="ml-auto flex shrink-0 items-center justify-end gap-2">
+                    <div className="ml-auto flex max-w-full flex-wrap items-center justify-end gap-2">
                       {project.milestones.map((milestone) => (
-                        <span key={milestone} className="inline-flex items-center rounded-full border border-[var(--resume-border)] bg-[var(--resume-bg)] px-2.5 py-0.5 text-xs font-semibold leading-5 text-[var(--resume-ink)]">{milestone}</span>
+                        <span key={milestone} className="inline-flex items-center whitespace-nowrap rounded-full border border-[var(--resume-border)] bg-[var(--resume-bg)] px-2.5 py-0.5 text-xs font-semibold leading-5 text-[var(--resume-ink)]">{milestone}</span>
                       ))}
                     </div>
                   ) : null}
