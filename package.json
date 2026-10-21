@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:x-tracking": "node --conditions=react-server --experimental-strip-types --test tests/x-conversions.test.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
@@ -18,7 +19,8 @@
     "rehype-highlight": "^7.0.2",
     "rehype-katex": "^7.0.1",
     "remark-gfm": "^4.0.1",
-    "remark-math": "^6.0.0"
+    "remark-math": "^6.0.0",
+    "server-only": "^0.0.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

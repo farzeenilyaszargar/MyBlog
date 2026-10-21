@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Source_Serif_4 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { socialImage } from "@/lib/social-image";
@@ -90,6 +91,14 @@ export default function RootLayout({
       lang="en"
       className={`${sourceSerif.variable} h-full antialiased`}
     >
+      <head>
+        <Script id="x-pixel-rbeyc" strategy="afterInteractive">
+          {`!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',
+a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+twq('config','rbeyc');`}
+        </Script>
+      </head>
       <body className="min-h-full flex flex-col">
         {children}
         <Analytics />
