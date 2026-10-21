@@ -13,6 +13,8 @@
   --resume-border: #c8ad91;
   --resume-hover-bg: #4d2f20;
   --resume-ink: #fffaf1;
+  --selection-bg: #dfcdb3;
+  --selection-ink: #2b2621;
 }
 
 :root[data-theme="dark"] {
@@ -28,6 +30,8 @@
   --resume-border: #cfc3b5;
   --resume-hover-bg: #fffaf1;
   --resume-ink: #1a1917;
+  --selection-bg: #334b60;
+  --selection-ink: #f3efe7;
 }
 
 * {
@@ -233,8 +237,8 @@ a {
 }
 
 ::selection {
-  background: #dfcdb3;
-  color: var(--ink);
+  background: var(--selection-bg);
+  color: var(--selection-ink);
 }
 
 :root[data-theme="dark"] .profile-image {
