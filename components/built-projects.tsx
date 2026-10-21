@@ -7,10 +7,10 @@ const projects = [
   { icon: "tayyari", name: "Tayyari | Do JEE Prep", url: "https://tayyari.online", description: "a jee preparation ai questionaiare", milestones: ["~200 users"], note: "Need to optimise and build better iteration" },
   { icon: "fizlint", name: "Fizlint", url: "https://fizlint.vercel.app/", description: "a live linting cli tool for js and ts" },
   { icon: "itemio", name: "Itemio", url: "https://itemio.vercel.app", description: "identify products from photos, estimate their value, and find marketplace listings" },
-  { icon: "caseway", name: "Caseway", url: "https://caseway.vercel.app", description: "AI tooling for automating legal and government workflows", note: "underrated project, could scale well" },
+  { icon: "caseway", name: "Caseway", url: "https://caseway.vercel.app", description: "AI tooling for automating legal and government workflows", note: "underrated project, could scale well", invertInLight: true },
   { icon: "glammetrics", name: "Glammetrics", url: "https://www.glametric.fun/", description: "AI-powered facial analysis and appearance scoring", note: "exploring insta ads and products" },
-  { icon: "lightpost", name: "Lightpost", url: "https://lightpostt.vercel.app/", description: "the news app that updates info live and fun games" },
-  { icon: "lunoir", name: "Lunoir", url: "https://lunoir.vercel.app/", description: "my first next.js app ever with animations and merchandise" },
+  { icon: "lightpost", name: "Lightpost", url: "https://lightpostt.vercel.app/", description: "the news app that updates info live and fun games", invertInLight: true },
+  { icon: "lunoir", name: "Lunoir", url: "https://lunoir.vercel.app/", description: "my first next.js app ever with animations and merchandise", invertInLight: true },
 ];
 
 export default function BuiltProjects() {
@@ -26,7 +26,7 @@ export default function BuiltProjects() {
               rel={project.url.startsWith("/") ? undefined : "noopener noreferrer"}
               className="grid grid-cols-[2rem_minmax(0,1fr)] items-start gap-3 rounded-sm py-5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--ink)]"
             >
-              <Image src={`/project-icons/${project.icon}.webp`} alt="" width={32} height={32} className="mt-0.5 h-8 w-8 rounded-md object-contain" />
+              <Image src={`/project-icons/${project.icon}.webp`} alt="" width={32} height={32} data-invert-in-light={project.invertInLight || undefined} className="mt-0.5 h-8 w-8 rounded-md object-contain" />
               <div className="min-w-0">
                 <div className="flex items-center gap-3">
                   <h3 className="min-w-0 text-lg font-medium leading-7 text-[var(--ink)]">{project.name}</h3>
