@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const projects = [
-  { icon: "nap", name: "Nap", url: "https://nap-code.com/", description: "run your agents anywhere anytime", milestones: ["+3k users", "₹5 Lakh Grant"] },
+  { icon: "nap", name: "Nap", url: "https://nap.cx/", description: "run your agents anywhere anytime", milestones: ["+3k users", "₹5 Lakh Grant"] },
   { icon: "superflights", name: "SuperFlights", url: "/mumbai", description: "optimised flight booking", milestones: ["₹25 Lakh raised"] },
   { icon: "unleaf", name: "Unleaf", url: "https://www.unleaf.lol/", description: "online LaTex editor which compiles instantaneously", milestones: ["+1k users"] },
   { icon: "tayyari", name: "Tayyari | Do JEE Prep", url: "https://tayyari.online", description: "a jee preparation ai questionaiare", milestones: ["~200 users"], note: "Need to optimise and build better iteration" },
