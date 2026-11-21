@@ -1,0 +1,15 @@
+.page { --cream: #f7ebd1; --gold: #f1d39c; --dim: #af9e8b; --line: #4a3530; min-height: 100svh; background: radial-gradient(ellipse at 50% 0%, #2a1520 0%, #140d12 55%, #100c0f 100%); color: var(--cream); font-family: Arial, Helvetica, sans-serif; }
+.page ::selection { background: #dfbb79; color: #140d12; }
+.content { width: min(720px, 100%); margin: 0 auto; padding: 48px 20px 64px; font-size: 16px; line-height: 1.7; }
+.back { display: inline-block; margin-bottom: 28px; color: var(--dim); font-size: 14px; text-decoration: none; }
+.back:hover { color: var(--gold); }
+.title { font-family: var(--font-olde-tome), Georgia, serif; font-size: clamp(44px, 9vw, 64px); line-height: 1.1; font-weight: 400; margin: 0 0 6px; color: var(--gold); text-shadow: 0 2px 0 #593a25, 0 5px 30px #000b; }
+.sub { margin: 0 0 28px; color: var(--dim); font-size: 14px; }
+.card { background: #24101a; border: 1px solid var(--line); border-radius: 10px; padding: 16px 20px; margin: 20px 0; }
+.card p { margin: 0; }
+.content h2 { font-family: var(--font-olde-tome), Georgia, serif; font-weight: 400; font-size: 26px; color: var(--gold); margin: 34px 0 6px; }
+.content p, .content li { color: #e5d8c3; }
+.content ul { padding-left: 20px; }
+.content a { color: var(--gold); }
+.footer { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--dim); font-size: 13px; }
+.footer a { color: var(--dim); }
