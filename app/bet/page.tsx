@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import localFont from "next/font/local";
 import styles from "./bet.module.css";
 
@@ -36,7 +37,7 @@ export default function BetPage() {
         <p className={styles.description}>Turn one coin into 100 quintillion. Stack boons that bend the rules.<br className={styles.desktopBreak} /> Survive a House that cheats differently every round.</p>
         <div className={styles.downloadArea}>
           {appStoreUrl ? <a className={styles.download} href={appStoreUrl} target="_blank" rel="noopener noreferrer" aria-label="Download The Last Bet on the App Store"><Image src="/bet/apple.svg" width={25} height={31} alt="" aria-hidden="true" /><span><small>Download on the</small><strong>App Store</strong></span></a> : <div className={styles.download} role="status"><Image src="/bet/apple.svg" width={25} height={31} alt="" aria-hidden="true" /><span><small>Coming to the</small><strong>App Store</strong></span></div>}
-          <p className={styles.downloadNote}>{appStoreUrl ? "Available for iOS" : "iOS · Download link coming soon"}</p>
+          <p className={styles.downloadNote}>{appStoreUrl ? "Available for iOS" : "iOS · Download link coming soon"} · <Link href="/bet/support">Support</Link> · <Link href="/bet/privacy">Privacy</Link></p>
         </div>
       </main>
     </div>
